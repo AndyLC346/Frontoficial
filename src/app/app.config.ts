@@ -24,7 +24,7 @@ export const appConfig: ApplicationConfig = {
     provideClientHydration(withEventReplay()),
     provideHttpClient(withFetch(),withInterceptorsFromDi()),
     provideCharts(withDefaultRegisterables()),
-    importProvidersFrom(
+    importProvidersFrom(  
       JwtModule.forRoot({
         config: {
           tokenGetter: tokenGetter,

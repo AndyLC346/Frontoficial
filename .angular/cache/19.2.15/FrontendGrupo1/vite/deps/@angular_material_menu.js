@@ -7,16 +7,16 @@ import {
   TemplatePortal
 } from "./chunk-7JKLR6BA.js";
 import {
-  MatRippleModule
-} from "./chunk-3FV62HY2.js";
-import {
   CdkScrollableModule
 } from "./chunk-LDD4JSD3.js";
 import "./chunk-HYAYA6QS.js";
 import {
+  MatRippleModule
+} from "./chunk-R7L3CACS.js";
+import {
   MatRipple,
   _StructuralStylesLoader
-} from "./chunk-NA6Q6CDO.js";
+} from "./chunk-7WNQGJVL.js";
 import "./chunk-U56OCIKL.js";
 import "./chunk-42FJBLFI.js";
 import "./chunk-JXBCBRYI.js";
