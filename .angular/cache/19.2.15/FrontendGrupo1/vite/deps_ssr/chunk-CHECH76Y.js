@@ -11,6 +11,9 @@ import {
   coerceCssPixelValue
 } from "./chunk-C5HDTQAM.js";
 import {
+  supportsScrollBehavior
+} from "./chunk-JME5XKN5.js";
+import {
   ESCAPE,
   _IdGenerator,
   _getEventTarget,
@@ -21,9 +24,6 @@ import {
   _CdkPrivateStyleLoader,
   _bindEventWithOptions
 } from "./chunk-5ICBFHDG.js";
-import {
-  supportsScrollBehavior
-} from "./chunk-JME5XKN5.js";
 import {
   BidiModule,
   Directionality
@@ -3465,4 +3465,4 @@ export {
   CdkConnectedOverlay,
   OverlayModule
 };
-//# sourceMappingURL=chunk-LYVHZUQU.js.map
+//# sourceMappingURL=chunk-CHECH76Y.js.map
