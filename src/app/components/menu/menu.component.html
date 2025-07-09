@@ -21,12 +21,12 @@
 
 
 <!-- PANEL DE ICONOS -->
-<div class="dashboard">
+<div class="dashboard" *ngIf="verificar()">
   <div class="grid">
 
     <!-- ‑‑‑‑ USUARIOS ‑‑‑‑ -->
 
-    <div class="card" [matMenuTriggerFor]="menuUsuarios">
+    <div class="card" [matMenuTriggerFor]="menuUsuarios" *ngIf="isAdminNegocio()">
       <img src="assets/logosmenu/usuario.jpg" class="logousua">
       <span style="font-size: 20px;">Usuarios</span>
     </div>

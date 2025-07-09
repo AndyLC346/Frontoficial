@@ -3,7 +3,6 @@ import { environment } from '../../environments/environment';
 import { HttpClient } from '@angular/common/http';
 import { Usuario } from '../models/usuario';
 import { Subject } from 'rxjs';
-import { UsuarioEstadoDTO } from '../models/usuarioestadoDTO';
 const base_url = environment.base
 @Injectable({
   providedIn: 'root'

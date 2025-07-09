@@ -6,6 +6,7 @@ import { MatIconModule } from '@angular/material/icon'
 import { RouterLink } from '@angular/router';
 import { MatGridListModule } from '@angular/material/grid-list';
 import { LoginService } from '../../services/login.service';
+import { CommonModule } from '@angular/common';
 
 
 @Component({
@@ -17,7 +18,7 @@ import { LoginService } from '../../services/login.service';
     MatMenuModule,
     MatIconModule,
     RouterLink,
-    MatGridListModule,
+    MatGridListModule, CommonModule,
   ],
   templateUrl: './menu.component.html',
   styleUrl: './menu.component.css'
@@ -39,13 +40,22 @@ role: string = '';
     this.role = this.loginService.showRole();
     return this.loginService.verificar();
   }
+  isGerente() {
+    return this.role === 'GERENTE';        
+  }
+
+  isAdmin() {
+    return this.role === 'ADMINAPLICACION';
+  }
   isCliente() {
     return this.role === 'Cliente';        
   }
 
-  isGerente() {
-    return this.role === 'Gerente';
+  isAdminNegocio() {
+    return this.role === 'ADMINNEGOCIO';
   }
+  
+
 
 ngOnInit() {
   this.role = this.loginService.showRole();

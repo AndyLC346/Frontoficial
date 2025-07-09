@@ -32,7 +32,6 @@ constructor(private http: HttpClient) {}
     return decodedToken?.role;
   }
 
-
  registrar(usuario: any) {
   const body = {
     username: usuario.username,

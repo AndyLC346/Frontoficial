@@ -17,10 +17,8 @@ import { InsertareditardescuentosComponent } from './components/descuentos/inser
 import { ListardescuentosComponent } from './components/descuentos/listardescuentos/listardescuentos.component';
 import { DetalleUsuarioComponent } from './components/usuario/detalle-usuario/detalle-usuario.component';
 import { NotificacionesComponent } from './components/notificaciones/notificaciones.component';
-import { ListarNotificacionesComponent } from './components/notificaciones/listar-notificaciones/listar-notificaciones.component';
 import { InsertarEditarNotificacionesComponent } from './components/notificaciones/insertar-editar-notificacioes/insertar-editar-notificacioes.component';
 import { MetodoPagoComponent } from './components/metodo-pago/metodo-pago.component';
-import { ListarMetodoPagoComponent } from './components/metodo-pago/listar-metodo-pago/listar-metodo-pago.component';
 import { InsertarEditarMetodoPagoComponent } from './components/metodo-pago/insertar-editar-metodo-pago/insertar-editar-metodo-pago.component';
 import { ChatComponent } from './components/chat/chat.component';
 import { InsertareditarchatComponent } from './components/chat/insertareditarchat/insertareditarchat.component';
@@ -30,7 +28,6 @@ import { LoginComponent } from './components/login/login.component';
 import { seguridadGuard } from './guards/seguridad.guard';
 import { InicioComponent } from './components/inicio/inicio.component';
 import { RegistrarComponent } from './components/registrar/registrar.component';
-import { ListarDescuentosOrdenadosPorPorcentajeDTO } from './models/ListarDescuentosOrdenadosXPorcentaje';
 import { ListardescuentosordenadosporporcentajeComponent } from './components/descuentos/listardescuentosordenadosporporcentaje/listardescuentosordenadosporporcentaje.component';
 import { BuscarproductoComponent } from './components/producto/buscarproducto/buscarproducto.component';
 import { BuscartiendaComponent } from './components/tienda/buscartienda/buscartienda.component';
@@ -67,7 +64,7 @@ export const routes: Routes = [
     path: 'home',
     component: HomeComponent,
     pathMatch: 'full',
-    canActivate: [seguridadGuard],
+    
   },
 
   {
@@ -102,7 +99,9 @@ export const routes: Routes = [
         component: DetalleUsuarioComponent,
       },
       {
-        path:'cantidadusuaractivo',component:GraficoestadousuarioComponent
+        path:'cantidadusuaractivo',component:GraficoestadousuarioComponent,
+        canActivate: [seguridadGuard],
+        data: { rolesPermitidos: ['ADMINNEGOCIO'] },
       }
     ],
   },

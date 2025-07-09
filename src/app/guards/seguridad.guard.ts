@@ -2,16 +2,26 @@ import { ActivatedRouteSnapshot, CanActivateFn, Router, RouterStateSnapshot } fr
 import { LoginService } from '../services/login.service';
 import { inject } from '@angular/core';
 
-export const seguridadGuard= (
+export const seguridadGuard: CanActivateFn = (
   route: ActivatedRouteSnapshot,
   state: RouterStateSnapshot
 ) => {
     const lService=inject(LoginService)
     const router=inject(Router)
-    const rpta=lService.verificar();
-    if(!rpta){
+    const autenticado=lService.verificar();
+    const roles = lService.showRole();
+    
+    if(!autenticado){
       router.navigate(['/login']);
       return false;
     }
-    return rpta;
+
+    const rolesPermitidos = route.data['rolesPermitidos'] as string[];
+
+    if (rolesPermitidos && !rolesPermitidos.includes(roles)) {
+    router.navigate(['/no-autorizado']);
+    return false;
+  }
+
+  return true;
 };
