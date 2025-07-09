@@ -1,0 +1,37 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/usuario.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="usuario-detalle-container">
+    <h2>Ficha del Usuario</h2>
+
+    <div class="usuario-card">
+      <div class="usuario-foto">
+        <img [src]="obtenerImagenProducto()" alt="Foto de usuario">
+      </div>
+
+      <div class="usuario-info">
+        <p><strong>ID:</strong> {{ usuario?.idUser}}</p>
+        <p><strong>Username:</strong> {{ usuario?.username }}</p>
+        <p><strong>Nombre:</strong> {{ usuario?.nombres }} {{ usuario?.apellidos }}</p>
+        <p><strong>Correo:</strong> {{ usuario?.emailUsuario }}</p>
+        <p><strong>Teléfono:</strong> {{ usuario?.telefono }}</p>
+        <p><strong>Estado:</strong> <span [ngClass]="usuario?.enabled? 'activo' : 'inactivo'">{{ usuario?.enabled ?
+            'Activo' : 'Inactivo' }}</span></p>
+      </div>
+    </div>
+
+    <div class="volver-btn">
+      <button mat-raised-button color="primary" routerLink="/usuarios">Volver</button>
+    </div>
+  </div>
+</div>

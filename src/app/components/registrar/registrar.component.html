@@ -1,0 +1,54 @@
+<div class="container" style="text-align: center">
+  <div class="card-decorativa">
+    <!-- Logo y título -->
+    <div class="contenedor-logo" style="cursor: pointer" routerLink="/inicio">
+      <img src="assets/img/logo.png" alt="Logo de la empresa">
+    </div>
+    <h2>Crear cuenta</h2>
+
+    <!-- Campos del formulario -->
+    <mat-form-field class="example-full-width">
+      <mat-label>Nombre</mat-label>
+      <input matInput [(ngModel)]="nombres" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Apellidos</mat-label>
+      <input matInput [(ngModel)]="apellidos" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Email</mat-label>
+      <input matInput type="email" [(ngModel)]="emailUsuario" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Teléfono</mat-label>
+      <input matInput type="tel" [(ngModel)]="telefono" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario</mat-label>
+      <input matInput [(ngModel)]="username" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Contraseña</mat-label>
+      <input type="password" matInput [(ngModel)]="password" required>
+    </mat-form-field>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Confirmar Contraseña</mat-label>
+      <input type="password" matInput [(ngModel)]="confirmPassword" required>
+    </mat-form-field>
+    
+    <!-- Botón de registro -->
+    <button mat-raised-button (click)="registrar()">Registrarse</button>
+
+    <div class="registrar">
+      <span class="registrar-texto">¿Ya tienes cuenta? </span>
+      <button mat-raised-button class="custom-button" (click)="volverLogin()">Inicia sesión aquí</button>
+
+    </div>
+  </div>
+</div>

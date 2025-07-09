@@ -1,0 +1,58 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/comparar.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+
+<div class="dashboard">
+  <h2 style="text-align: center;">Comparar productos</h2>
+
+  <!-- FORMULARIO: IDs de productos -->
+  <form class="form-comparar">
+    <input type="number" [(ngModel)]="id1" name="id1" placeholder="ID producto 1" required>
+    <input type="number" [(ngModel)]="id2" name="id2" placeholder="ID producto 2" required>
+  </form>
+  <div *ngIf="error" class="error">{{ error }}</div>
+
+  <!-- COMPARACIÓN: Contenedor SIEMPRE visible -->
+  <div class="comparacion-container">
+
+    <!-- Tarjeta producto 1 (solo si hay datos) -->
+    <div class="tarjeta-comparar" *ngIf="productos.length === 2">
+      <h3>{{ productos[0].nombreProducto }}</h3>
+      <img [src]="obtenerImagenProducto(productos[0])" class="imagen-principal" alt="Imagen producto 1" />
+      <p><b>ID:</b> {{ productos[0].idProducto }}</p>
+      <p><b>Precio:</b> S/. {{ productos[0].precioProducto }}</p>
+      <p><b>Categoría:</b> {{ productos[0].categoriaProducto }}</p>
+      <p><b>Tienda:</b> {{ productos[0].tienda.nombreTienda }}</p>
+      <a [routerLink]="['/productos/detalle', productos[0].idProducto]">Ver detalle</a>
+    </div>
+
+    <!-- BOTONES (siempre visibles) -->
+    <div class="botonera-central">
+      <button class="btn-comparar" (click)="comparar()">Comparar</button>
+      <a routerLink="/productos">
+        <button class="btn-cancelar" type="button">Cancelar</button>
+      </a>
+    </div>
+
+    <!-- Tarjeta producto 2 (solo si hay datos) -->
+    <div class="tarjeta-comparar" *ngIf="productos.length === 2">
+      <h3>{{ productos[1].nombreProducto }}</h3>
+      <img [src]="obtenerImagenProducto(productos[1])" class="imagen-principal" alt="Imagen producto 2" />
+      <p><b>ID:</b> {{ productos[1].idProducto }}</p>
+      <p><b>Precio:</b> S/. {{ productos[1].precioProducto }}</p>
+      <p><b>Categoría:</b> {{ productos[1].categoriaProducto }}</p>
+      <p><b>Tienda:</b> {{ productos[1].tienda.nombreTienda }}</p>
+      <a [routerLink]="['/productos/detalle', productos[1].idProducto]">Ver detalle</a>
+    </div>
+
+  </div>
+</div>

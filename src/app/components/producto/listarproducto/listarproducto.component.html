@@ -1,0 +1,126 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/producto.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>Lista de Productos</h1>
+    </div>
+
+    <!-- BOTÓN DE CAMBIO DE VISTA -->
+    <div style="text-align: right; margin: 10px 20px;">
+      <button mat-button color="accent" (click)="cambiarVista()">
+        <mat-icon>{{ modoVisualizacion === 'lista' ? 'grid_view' : 'list' }}</mat-icon>
+        Cambiar a {{ modoVisualizacion === 'lista' ? 'Tarjetas' : 'Lista' }}
+      </button>
+    </div>
+
+    <!-- VISTA EN TABLA -->
+    <div class="tabla-contenedor" *ngIf="modoVisualizacion === 'lista'">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla-estilizada">
+
+        <ng-container matColumnDef="c1">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let element"> {{element.idProducto}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="c2">
+          <th mat-header-cell *matHeaderCellDef> Nombre producto </th>
+          <td mat-cell *matCellDef="let element"> {{element.nombreProducto}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="c3">
+          <th mat-header-cell *matHeaderCellDef> Precio producto </th>
+          <td mat-cell *matCellDef="let element"> {{element.precioProducto}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="c4">
+          <th mat-header-cell *matHeaderCellDef> Categoria </th>
+          <td mat-cell *matCellDef="let element"> {{element.categoriaProducto}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="c5">
+          <th mat-header-cell *matHeaderCellDef> Tienda </th>
+          <td mat-cell *matCellDef="let element"> {{element.tienda.nombreTienda}} </td>
+        </ng-container>
+
+        <ng-container matColumnDef="c6">
+          <th mat-header-cell *matHeaderCellDef> Ver más </th>
+          <td mat-cell *matCellDef="let element">
+            <a mat-icon-button color="primary" [routerLink]="['detalle', element.idProducto]">
+              <mat-icon>open_in_new</mat-icon>
+            </a>
+          </td>
+        </ng-container>
+
+       <!-- ✅ Actualizar (solo DISEÑO, sin tocar rutas) -->
+<ng-container matColumnDef="c7">
+  <th mat-header-cell *matHeaderCellDef> Actualizar </th>
+  <td mat-cell *matCellDef="let element">
+    <button
+      matButton
+      [routerLink]="['actualizaproducto', element.idProducto]"
+    >
+      Actualizar
+    </button>
+  </td>
+</ng-container>
+
+<!-- ✅ Eliminar (solo DISEÑO, sin tocar lógica) -->
+<ng-container matColumnDef="c8">
+  <th mat-header-cell *matHeaderCellDef> Eliminar </th>
+  <td mat-cell *matCellDef="let element">
+    <button
+      matButton
+      (click)="eliminar(element.idProducto)"
+    >
+      Eliminar
+    </button>
+  </td>
+</ng-container>
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+
+    <div class="grid-productos" *ngIf="modoVisualizacion === 'tarjeta'">
+      <div class="tarjeta-producto" *ngFor="let producto of dataSource.filteredData">
+        <h3 style="color: #c02020;">{{ producto.nombreProducto }}</h3>
+        <img [src]="obtenerImagenProducto(producto)" class="imagen-principal" alt="Imagen del producto">
+        <p>ID: {{ producto.idProducto }}</p>
+        <p>Precio: S/. {{ producto.precioProducto }}</p>
+        <p>Categoría: {{ producto.categoriaProducto }}</p>
+        <p>Tienda: {{ producto.tienda.nombreTienda }}</p>
+        <div class="acciones">
+          <button mat-icon-button color="primary" [routerLink]="['detalle', producto.idProducto]">
+            <mat-icon>open_in_new</mat-icon>
+          </button>
+          <button mat-icon-button color="accent" [routerLink]="['actualizaproducto', producto.idProducto]">
+            <mat-icon>edit</mat-icon>
+          </button>
+          <button mat-icon-button color="warn" (click)="eliminar(producto.idProducto)">
+            <mat-icon>delete</mat-icon>
+          </button>
+        </div>
+      </div>
+    </div>
+
+    <!-- Paginator -->
+    <div class="contenedor-paginator" *ngIf="modoVisualizacion === 'lista'">
+      <mat-paginator class="paginator-estilizado" [length]="dataSource.data.length" [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Selecciona página">
+      </mat-paginator>
+    </div>
+
+    <h2>Cantidad de productos ({{ dataSource.filteredData.length }})</h2>
+
+  </div>
+</div>

@@ -1,0 +1,175 @@
+.contenedor-encabezado {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.encabezado {
+  background-color: white;
+  width: 100%;
+  padding: 0px 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+  border-bottom: 3px solid black;
+  /* 👈 línea negra delgada */
+}
+
+
+.contenedor-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.dashboard {
+  background-color: #99d9f2;
+  padding: 30px 15px;
+  min-height: 100vh;
+  margin-top: -20px; /* 👈 crea separación visible para que aparezca el borde */
+}
+
+/* Estilos para el título "Lista de Chats" */
+.titulo-chats {
+  text-align: center;
+  margin-top: 20px; /* Margen superior para separar del encabezado */
+  margin-bottom: 20px; /* Margen inferior para separar de la tabla */
+  font-size: 28px; /* Tamaño de fuente para el título */
+  color: #333; /* Color de fuente */
+}
+
+
+/* Estilos para la tabla */
+.tabla-contenedor {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.tabla-estilizada {
+  width: 100%;
+  max-width: 1000px;
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tabla-estilizada th {
+  background-color: #1b6312;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tabla-estilizada td {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+}
+
+/* Estilos para los íconos de los botones (edit y delete) */
+.mat-icon {
+  vertical-align: middle; /* Para alinear los íconos con el texto si hubiera */
+}
+
+.contenedor-paginator {
+  display: flex;
+  justify-content: flex-end; /* Alineado a la derecha */
+  margin-top: 20px;
+  margin-bottom: 10px;
+  padding-right: 20px; /* Opcional: separarlo del borde derecho */
+}
+
+.paginator-estilizado {
+  background-color: white; /* Fondo blanco solo del paginator */
+  padding: 1px 12px;
+  border-radius: 8px;
+  box-shadow: 0 2px 6px rgba(0, 0, 0, 0.1); /* Opcional: sombra ligera */
+  width: auto; /* Evita que se expanda */
+}
+
+
+.grid-productos {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+  gap: 20px;
+  margin: 20px;
+}
+
+.tarjeta-producto {
+  background-color: #fff;
+  width: 220px;
+  border-radius: 12px;
+  box-shadow: 0 4px 10px rgba(0, 0, 0, 0.15);
+  padding: 15px;
+  text-align: center;
+  transition: transform 0.2s ease-in-out;
+}
+
+.tarjeta-producto:hover {
+  transform: scale(1.02);
+}
+
+.tarjeta-producto img {
+  width: 100%;
+  height: 140px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+.tarjeta-producto h3 {
+  font-size: 18px;
+  margin: 10px 0 5px;
+}
+
+.tarjeta-producto p {
+  font-size: 14px;
+  margin: 4px 0;
+}
+
+.acciones {
+  display: flex;
+  justify-content: center;
+  gap: 10px;
+  margin-top: 10px;
+}
+
+
+.imagen-principal {
+  max-width: 400px;
+  width: 100%;
+  height: auto;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.2);
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+.logopng {
+  width: 90px;
+  height: auto;
+  margin-left: -140px;
+  margin-top: -70px;
+}
+
+.titulopng {
+  width: 140px;
+  height: auto;
+  margin-left: 10px;
+  margin-top: -70px;
+}
+
+.logo-centro {
+  display: block;
+  margin: 20px auto 10px auto; /* top, right, bottom, left */
+  margin-left: 455px;
+  width: 100px;
+  height: auto;
+}

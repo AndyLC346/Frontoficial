@@ -1,0 +1,32 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/producto.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+
+<div class="dashboard">
+
+
+  <div class="title-container">
+    <div style="text-align: center" class="title">
+      <h1>Cantidad de Chats por Tienda</h1>
+    </div>
+
+    <div style="text-align: center" class="chart-container">
+      <canvas baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [type]="barChartType"
+      ></canvas>
+    </div>
+  </div>
+</div>

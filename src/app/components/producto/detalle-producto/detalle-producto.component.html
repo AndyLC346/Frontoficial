@@ -1,0 +1,34 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/producto.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div *ngIf="producto" class="detalle-contenedor">
+    <h2>{{ producto.nombreProducto }}</h2>
+
+    <img [src]="obtenerImagenProducto()" class="imagen-principal" alt="Imagen del producto">
+
+    <div class="info">
+      <p><strong>ID:</strong> {{ producto.idProducto }}</p>
+      <p><strong>Descripción:</strong> {{ producto.descripcionProducto }}</p>
+      <p><strong>Precio:</strong> S/ {{ producto.precioProducto }}</p>
+      <p><strong>Categoría:</strong> {{ producto.categoriaProducto }}</p>
+      <p><strong>Stock:</strong> {{ producto.stock }}</p>
+      <p><strong>Fecha de creación:</strong> {{ producto.fechaCreacionProducto | date }}</p>
+      <p><strong>Tienda:</strong> {{ producto.tienda.nombreTienda }}</p>
+      <div style="text-align: center; margin-top: 30px;">
+      </div>
+      <div class="volver-contenedor">
+        <button mat-raised-button color="primary" class="btn-volver" [routerLink]="['/productos']">Volver</button>
+      </div>
+    </div>
+  </div>
+</div>

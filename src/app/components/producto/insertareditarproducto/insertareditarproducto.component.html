@@ -1,0 +1,145 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+    <div class="contenedor-logo" routerLink="/menu" style="cursor: pointer;">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/producto.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>{{ actualizacion ? 'Editar' : 'Registrar' }} Producto</h1>
+    </div>
+
+    <div style="text-align: center">
+      <form [formGroup]="form" (submit)="aceptar()">
+
+        <mat-form-field class="example-full-width" *ngIf="actualizacion">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="codigopro" readonly />
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Producto</mat-label>
+          <input matInput placeholder="Ingresa nombre" formControlName="nombrepro" />
+          <mat-error *ngIf="form.get('nombrepro')?.hasError('required')">
+            El nombre es obligatorio.
+          </mat-error>
+          <mat-error *ngIf="form.get('nombrepro')?.hasError('maxlength')">
+            Máximo 100 caracteres.
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Descripción</mat-label>
+          <input matInput placeholder="Ingresa descripción" formControlName="descripcionPro" />
+          <mat-error *ngIf="form.get('descripcionPro')?.hasError('required')">
+            La descripción es obligatoria.
+          </mat-error>
+          <mat-error *ngIf="form.get('descripcionPro')?.hasError('maxlength')">
+            Máximo 300 caracteres.
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Precio</mat-label>
+          <input matInput type="number" placeholder="Ej. 49.90" formControlName="precioPro" />
+          <mat-error *ngIf="form.get('precioPro')?.hasError('required')">
+            El precio es obligatorio.
+          </mat-error>
+          <mat-error *ngIf="form.get('precioPro')?.hasError('pattern')">
+            Solo se permiten números válidos.
+          </mat-error>
+          <mat-error *ngIf="form.get('precioPro')?.hasError('min')">
+            El precio debe ser mayor a 0.
+          </mat-error>
+          <mat-error *ngIf="form.get('precioPro')?.hasError('max')">
+            El precio no puede exceder 10,000.
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Categoría</mat-label>
+          <mat-select formControlName="categoriaPro">
+            <mat-option *ngFor="let cat of tipos" [value]="cat.value">
+              {{ cat.viewValue }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('categoriaPro')?.hasError('required')">
+            La categoría es obligatoria.
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Stock</mat-label>
+          <input matInput type="number" placeholder="Ej. 10" formControlName="stockPro" />
+          <mat-error *ngIf="form.get('stockPro')?.hasError('required')">
+            El stock es obligatorio.
+          </mat-error>
+          <mat-error *ngIf="form.get('stockPro')?.hasError('pattern')">
+            Solo se permiten números enteros.
+          </mat-error>
+          <mat-error *ngIf="form.get('stockPro')?.hasError('min')">
+            Debe haber al menos 1 unidad.
+          </mat-error>
+          <mat-error *ngIf="form.get('stockPro')?.hasError('max')">
+            El stock no puede superar 10,000 unidades.
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Fecha de creación</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="fechaPro" />
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="form.get('fechaPro')?.hasError('required')">
+            La fecha es obligatoria.
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <mat-form-field class="example-full-width">
+          <mat-label>Tienda</mat-label>
+          <mat-select formControlName="tiendita">
+            <mat-option *ngFor="let tienda of listaTienda" [value]="tienda.idTienda">
+              {{ tienda.nombreTienda }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('tiendita')?.hasError('required')">
+            La tienda es obligatoria.
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <button
+          mat-raised-button
+          style="background-color: black; color: white; border-radius: 6px; margin-right: 10px;"
+          type="submit"
+          [disabled]="form.invalid"
+        >
+          {{ actualizacion ? 'Actualizar' : 'Registrar' }}
+        </button>
+
+        <button
+          mat-raised-button
+          style="background-color: black; color: white; border-radius: 6px;"
+          type="button"
+          (click)="cancelar()"
+        >
+          Cancelar
+        </button>
+
+      </form>
+    </div>
+  </div>
+</div>

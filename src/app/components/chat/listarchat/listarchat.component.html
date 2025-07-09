@@ -1,0 +1,80 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/chat.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <h1 class="titulo-chats">Lista de Chats</h1>
+    <mat-form-field appearance="fill">
+      <mat-label>busqueda por contenido</mat-label>
+      <input matInput [(ngModel)]="filtro" (input)="aplicarFiltro()" placeholder="filtrar" />
+    </mat-form-field>
+    <div class="tabla-contenedor">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla-estilizada">
+        <ng-container matColumnDef="c1">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.idChat }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="c2">
+          <th mat-header-cell *matHeaderCellDef>Contenido</th>
+          <td mat-cell *matCellDef="let element">{{ element.contenido }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="c3">
+          <th mat-header-cell *matHeaderCellDef>Fecha Inicio</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.fechaInicioChat }}
+          </td>
+        </ng-container>
+
+        <ng-container matColumnDef="c4">
+          <th mat-header-cell *matHeaderCellDef>Usuario</th>
+          <td mat-cell *matCellDef="let element">{{ element.user.username }}</td>
+        </ng-container>
+
+        <ng-container matColumnDef="c5">
+          <th mat-header-cell *matHeaderCellDef>Tienda</th>
+          <td mat-cell *matCellDef="let element">
+            {{ element.tienda.nombreTienda }}
+          </td>
+        </ng-container>
+<!-- ACTUALIZAR -->
+<ng-container matColumnDef="c6">
+  <th mat-header-cell *matHeaderCellDef>Actualizar</th>
+  <td mat-cell *matCellDef="let element">
+    <button matButton [routerLink]="['ediciones', element.idChat]">
+      Actualizar
+    </button>
+  </td>
+</ng-container>
+
+<!-- ELIMINAR -->
+<ng-container matColumnDef="c7">
+  <th mat-header-cell *matHeaderCellDef>Eliminar</th>
+  <td mat-cell *matCellDef="let element">
+    <button matButton color="warn" (click)="eliminar(element.idChat)">
+      Eliminar
+    </button>
+  </td>
+</ng-container>
+
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+    <div class="contenedor-paginator">
+      <mat-paginator class="paginator-estilizado" [length]="dataSource.data.length" [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 20]" showFirstLastButtons aria-label="Selecciona página">
+      </mat-paginator>
+    </div>
+  </div>
+</div>

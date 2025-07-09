@@ -1,0 +1,118 @@
+.logopng {
+  width: 90px;
+  height: auto;
+  margin-left: -140px;
+  margin-top: -70px;
+}
+
+.titulopng {
+  width: 140px;
+  height: auto;
+  margin-left: 10px;
+  margin-top: -70px;
+}
+
+.logo-centro {
+  display: block;
+  margin: 20px auto 10px auto;
+  /* top, right, bottom, left */
+  margin-left: 455px;
+  width: 100px;
+  height: auto;
+}
+
+.contenedor-encabezado {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.encabezado {
+  background-color: white;
+  width: 100%;
+  padding: 0px 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+  border-bottom: 3px solid black;
+  /* 👈 línea negra delgada */
+}
+
+
+.contenedor-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.dashboard {
+  background-color: #99d9f2;
+  padding: 30px 15px;
+  min-height: 100vh;
+  margin-top: -20px;
+  /* 👈 crea separación visible para que aparezca el borde */
+}
+
+.title-container {
+
+  text-align: center;
+
+  margin-bottom: 40px;
+  /* Increase the margin-bottom to move the title lower */
+
+  margin-top: 60px;
+  /* Add a margin-top to further position it down the page */
+
+}
+
+
+
+.title {
+
+  font-family: 'Poppins', sans-serif;
+
+  font-weight: 600;
+
+  font-size: 2em;
+
+  color: #333;
+
+}
+
+
+
+.chart-container {
+
+  width: 70%;
+
+  margin: 0 auto;
+
+  padding: 9px;
+
+  box-sizing: border-box;
+
+  height: 500px;
+  /* <-- Añade esta línea */
+
+  position: relative;
+  /* <-- Necesario para Chart.js */
+
+}
+
+
+
+@media (max-width: 768px) {
+
+  .chart-container {
+
+    width: 100%;
+    /* Ajusta el ancho para pantallas más pequeñas */
+
+    padding: 10px;
+    /* Reduce el padding en pantallas más pequeñas */
+
+  }
+
+}

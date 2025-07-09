@@ -1,0 +1,21 @@
+<router-outlet></router-outlet>
+
+
+<!--Botón Chat-->
+<button mat-fab class="boton-chat" (click)="toggleChat()">
+  <mat-icon>chat</mat-icon>
+</button>
+
+<app-chatbot *ngIf="chatAbierto" [abierto]="true"></app-chatbot>
+
+
+<!--  Música de fondo  -->
+<audio #audioPlayer muted loop>
+  <source src="assets/songs/cancionmenu2.mp3" type="audio/mpeg" />
+</audio>
+
+<button mat-icon-button class="boton-sonido"
+        (click)="toggleMute(audioPlayer)">
+  <mat-icon>{{ isMuted ? 'volume_off' : 'volume_up' }}</mat-icon>
+</button>
+

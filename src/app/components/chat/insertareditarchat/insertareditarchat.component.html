@@ -1,0 +1,99 @@
+<!-- ENCABEZADO -->
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/chat.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<!-- CUERPO -->
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>Registro de Chats</h1>
+    </div>
+
+    <div style="text-align: center">
+      <form [formGroup]="form" (ngSubmit)="aceptar()">
+        <!-- ID (solo en edición) -->
+        <mat-form-field class="example-full-width" *ngIf="edicion">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="codigo" />
+          <mat-error *ngIf="form.get('codigo')?.hasError('required')">
+            El código es obligatorio
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Mensaje -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Mensaje</mat-label>
+          <textarea matInput formControlName="content" placeholder="mensaje..."></textarea>
+        </mat-form-field>
+
+        <!-- Botones de dictado en fila con estilo negro -->
+        <div style="display: flex; justify-content: center; gap: 16px; margin-top: 10px;">
+          <button mat-raised-button type="button" (click)="iniciarReconocimiento()"
+            style="background-color: black; color: white; border-radius: 10px; padding: 8px 20px;">
+            🎤 Iniciar Dictado
+          </button>
+
+          <button mat-raised-button type="button" (click)="detenerReconocimiento()"
+            style="background-color: black; color: white; border-radius: 10px; padding: 8px 20px;">
+            🛑 Detener
+          </button>
+        </div>
+        <br />
+
+        <!-- Fecha -->
+        <mat-form-field>
+          <mat-label>Fecha de creación</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="fechita" />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+        </mat-form-field>
+        <br />
+
+        <!-- Usuario -->
+        <mat-form-field>
+          <mat-label>Usuario</mat-label>
+          <mat-select formControlName="usuarii">
+            @for (food of listaUsuarios; track food) {
+              <mat-option [value]="food.idUser">{{ food.username }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <br />
+
+        <!-- Tienda -->
+        <mat-form-field>
+          <mat-label>Tiendas</mat-label>
+          <mat-select formControlName="tiendita">
+            @for (food of listaTiendas; track food) {
+              <mat-option [value]="food.idTienda">{{ food.nombreTienda }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+        <br />
+
+        <!-- Botones Aceptar / Cancelar en fila y con estilo negro -->
+        <div style="display: flex; justify-content: center; gap: 16px; margin-top: 20px;">
+          <button mat-raised-button type="submit"
+            style="background-color: black; color: white; border-radius: 10px; padding: 8px 20px;">
+            Registrar
+          </button>
+
+          <button mat-raised-button type="button" (click)="cancelar()"
+            style="background-color: black; color: white; border-radius: 10px; padding: 8px 20px;">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

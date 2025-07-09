@@ -1,0 +1,34 @@
+<div class="container" style="text-align: center">
+
+  <div class="card-decorativa">
+
+    <div class="contenedor-logo " style="cursor: pointer" routerLink="/inicio">
+      <img src="assets/img/logo.png" alt="Logo de la empresa">
+    </div>
+
+    <h2>Inicie sesión</h2>
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Usuario</mat-label>
+      <input matInput placeholder="Username" [(ngModel)]="username" />
+    </mat-form-field>
+
+    <br />
+
+    <mat-form-field class="example-full-width">
+      <mat-label>Constraseña</mat-label>
+      <input type="password" matInput placeholder="Password" [(ngModel)]="password" />
+    </mat-form-field>
+
+    <br />
+
+    <button mat-raised-button class="custom-button" (click)="login()">Aceptar</button>
+
+    <div class="registrar">
+      <span class="registrar-texto">¿Nuevo en AhorraComprando? </span>
+      <button mat-raised-button class="custom-button" (click)="Registrar()">Regístrate Aquí</button>
+    </div>
+
+  </div>
+
+</div>

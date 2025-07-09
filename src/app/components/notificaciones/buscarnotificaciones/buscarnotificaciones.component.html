@@ -1,0 +1,74 @@
+<!-- ENCABEZADO -->
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/producto.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<!-- CUERPO -->
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>Lista de Notificaciones</h1>
+    </div>
+
+    <!-- FILTRO -->
+    <form [formGroup]="form">
+      <div style="margin-bottom: 2px; width: 280px">
+        <mat-form-field appearance="fill">
+          <mat-label>Filtrar por estado</mat-label>
+          <mat-select formControlName="estadoLectura">
+            <mat-option value="">Todos</mat-option>
+            <mat-option value="true">Leídas</mat-option>
+            <mat-option value="false">No leídas</mat-option>
+          </mat-select>
+        </mat-form-field>
+      </div>
+    </form>
+
+    <!-- TABLA -->
+    <div class="tabla-contenedor">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla-estilizada">
+
+        <!-- ID -->
+        <ng-container matColumnDef="c1">
+          <th mat-header-cell *matHeaderCellDef> ID </th>
+          <td mat-cell *matCellDef="let n"> {{n.idNotificacion}} </td>
+        </ng-container>
+
+        <!-- Mensaje -->
+        <ng-container matColumnDef="c2">
+          <th mat-header-cell *matHeaderCellDef> Mensaje </th>
+          <td mat-cell *matCellDef="let n"> {{n.mensaje}} </td>
+        </ng-container>
+
+        <!-- Fecha de Envío -->
+        <ng-container matColumnDef="c3">
+          <th mat-header-cell *matHeaderCellDef> Fecha de Envío </th>
+          <td mat-cell *matCellDef="let n"> {{n.fechaEnvioNotificacion | date:'short'}} </td>
+        </ng-container>
+
+        <!-- Leído -->
+        <ng-container matColumnDef="c4">
+          <th mat-header-cell *matHeaderCellDef> Leído </th>
+          <td mat-cell *matCellDef="let n"> {{n.leido ? 'Sí' : 'No'}} </td>
+        </ng-container>
+
+        <!-- Usuario -->
+        <ng-container matColumnDef="c5">
+          <th mat-header-cell *matHeaderCellDef> Usuario </th>
+          <td mat-cell *matCellDef="let n"> {{n.user.username}} </td>
+        </ng-container>
+
+        <!-- Filas -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns;"></tr>
+      </table>
+    </div>
+  </div>
+</div>

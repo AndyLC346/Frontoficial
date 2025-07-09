@@ -1,0 +1,99 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/resena.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>Registro de reseñas</h1>
+    </div>
+    <div style="text-align: center">
+      <form [formGroup]="form" (ngSubmit)="aceptar()">
+
+        <!-- ID solo en modo edición -->
+        <mat-form-field class="example-full-width" *ngIf="actualizacion">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="codigorese">
+        </mat-form-field>
+        <br />
+
+        <!-- Calificación -->
+        <mat-form-field>
+          <mat-label>Calificación</mat-label>
+          <mat-select formControlName="califresena">
+            <mat-option *ngFor="let tipo of tipos" [value]="tipo.value">{{ tipo.viewValue }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('califresena')?.hasError('required')">La calificación es obligatoria</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Comentario -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Comentario</mat-label>
+          <input matInput placeholder="Ingresa comentario" formControlName="comentarioresena">
+          <mat-error *ngIf="form.get('comentarioresena')?.hasError('required')">
+            El comentario es obligatorio
+          </mat-error>
+          <mat-error *ngIf="form.get('comentarioresena')?.hasError('maxlength')">
+            Máximo 300 caracteres
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Fecha reseña -->
+        <mat-form-field>
+          <mat-label>Fecha de la reseña</mat-label>
+          <input matInput [matDatepicker]="picker" formControlName="fecharesena" />
+          <mat-hint>MM/DD/YYYY</mat-hint>
+          <mat-datepicker-toggle matIconSuffix [for]="picker"></mat-datepicker-toggle>
+          <mat-datepicker #picker></mat-datepicker>
+          <mat-error *ngIf="form.get('fecharesena')?.hasError('required')">
+            La fecha es obligatoria
+          </mat-error>
+          <mat-error *ngIf="form.get('fecharesena')?.hasError('fechaFutura')">
+            La fecha no puede ser futura
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Usuario -->
+        <mat-form-field>
+          <mat-label>Usuario</mat-label>
+          <mat-select formControlName="usersito">
+            <mat-option *ngFor="let user of listaUsuario" [value]="user.idUser">{{ user.username }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('usersito')?.hasError('required')">
+            Selecciona un usuario
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Producto -->
+        <mat-form-field>
+          <mat-label>Producto</mat-label>
+          <mat-select formControlName="productito">
+            <mat-option *ngFor="let prod of listaProducto" [value]="prod.idProducto">{{ prod.nombreProducto }}</mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('productito')?.hasError('required')">
+            Selecciona un producto
+          </mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Botones -->
+        <button class="btn-cancelar" color="primary" type="button">Registrar</button>
+        <button class="btn-cancelar" color="warn" type="button" (click)="cancelar()">Cancelar</button>
+      </form>
+    </div>
+  </div>
+</div>
+
+

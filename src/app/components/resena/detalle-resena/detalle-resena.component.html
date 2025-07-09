@@ -1,0 +1,42 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/resena.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+
+<div class="dashboard">
+  <div *ngIf="resena" class="detalle-contenedor">
+    <mat-card class="resena-card">
+      <div class="cabecera">
+        <span class="usuario">{{ resena.user.username }}</span>
+        <span class="fecha">{{ resena.fecha | date:'mediumDate' }}</span>
+      </div>
+
+      <div class="estrellas">
+        <mat-icon *ngFor="let _ of estrellasLlenas">star</mat-icon>
+        <mat-icon *ngFor="let _ of estrellasVacias">star_outline</mat-icon>
+      </div>
+
+      <p class="comentario">
+        {{ resena.comentario }}
+      </p>
+
+      <p class="producto">
+        Producto reseñado: <strong>{{ resena.producto.nombreProducto }}</strong>
+      </p>
+    </mat-card>
+
+    <div class="volver-contenedor">
+      <button class="btn-volver" (click)="volver()">
+        Volver
+      </button>
+    </div>
+  </div>
+</div>

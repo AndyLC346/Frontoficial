@@ -1,0 +1,79 @@
+<!-- ENCABEZADO -->
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/metodopago.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<!-- CUERPO -->
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center; margin: 6%">
+      <h1>Lista de Métodos de Pago</h1>
+    </div>
+
+    <!-- FILTRO -->
+    <div style="display: flex; align-items: center; gap: 20px; margin: 20px 0;">
+      <mat-icon style="font-size: 30px; color: black;">search</mat-icon>
+      <mat-form-field appearance="fill">
+        <mat-label>Buscar por tipo de pago</mat-label>
+        <input matInput [(ngModel)]="filtro" (input)="aplicarfiltro()" placeholder="Ej: Efectivo, Tarjeta...">
+      </mat-form-field>
+    </div>
+
+    <!-- TABLA -->
+    <div class="tabla-contenedor">
+      <table mat-table [dataSource]="dataSource" class="mat-elevation-z8 tabla-estilizada">
+
+        <!-- ID -->
+        <ng-container matColumnDef="c1">
+          <th mat-header-cell *matHeaderCellDef>ID</th>
+          <td mat-cell *matCellDef="let element">{{ element.idMetodoPago }}</td>
+        </ng-container>
+
+        <!-- Tipo -->
+        <ng-container matColumnDef="c2">
+          <th mat-header-cell *matHeaderCellDef>Tipo</th>
+          <td mat-cell *matCellDef="let element">{{ element.tipo }}</td>
+        </ng-container>
+
+        <!-- Vencimiento -->
+        <ng-container matColumnDef="c3">
+          <th mat-header-cell *matHeaderCellDef>Vencimiento</th>
+          <td mat-cell *matCellDef="let element">{{ element.vencimientoMetodo | date: 'dd/MM/yyyy' }}</td>
+        </ng-container>
+
+        <!-- Usuario -->
+        <ng-container matColumnDef="c4">
+          <th mat-header-cell *matHeaderCellDef>Usuario</th>
+          <td mat-cell *matCellDef="let element">{{ element.user.username }}</td>
+        </ng-container>
+
+        <!-- Filas -->
+        <tr mat-header-row *matHeaderRowDef="displayedColumns"></tr>
+        <tr mat-row *matRowDef="let row; columns: displayedColumns"></tr>
+      </table>
+    </div>
+
+    <!-- PAGINADOR -->
+    <div class="contenedor-paginator">
+      <mat-paginator
+        class="paginator-estilizado"
+        [length]="dataSource.data.length"
+        [pageSize]="5"
+        [pageSizeOptions]="[5, 10, 20]"
+        showFirstLastButtons
+        aria-label="Selecciona página"
+      ></mat-paginator>
+    </div>
+
+    <!-- TOTAL -->
+    <h2>Total de métodos de pago: {{ dataSource.filteredData.length }}</h2>
+  </div>
+</div>

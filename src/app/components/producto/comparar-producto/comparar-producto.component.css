@@ -1,0 +1,158 @@
+.contenedor-encabezado {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.encabezado {
+  background-color: white;
+  width: 100%;
+  padding: 0px 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+  border-bottom: 3px solid black;
+  /* 👈 línea negra delgada */
+}
+
+
+.contenedor-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.dashboard {
+  background-color: #99d9f2;
+  padding: 30px 15px;
+  min-height: 100vh;
+  margin-top: -20px; /* 👈 crea separación visible para que aparezca el borde */
+}
+
+.logopng {
+  width: 90px;
+  height: auto;
+  margin-left: -140px;
+  margin-top: -70px;
+}
+
+.titulopng {
+  width: 140px;
+  height: auto;
+  margin-left: 10px;
+  margin-top: -70px;
+}
+.logo-centro {
+  display: block;
+  margin: 20px auto 10px auto; /* top, right, bottom, left */
+  margin-left: 455px;
+  width: 100px;
+  height: auto;
+}
+
+
+
+/* FORMULARIO DE ID */
+.form-comparar {
+  text-align: center;
+  margin-bottom: 20px;
+  display: flex;
+  justify-content: center;
+  gap: 12px;
+}
+
+.error {
+  color: red;
+  text-align: center;
+  margin-top: 8px;
+}
+
+/* COMPARACIÓN */
+.comparacion-container {
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  gap: 40px;
+  flex-wrap: wrap;
+  margin-top: 30px;
+}
+
+/* TARJETAS */
+.tarjeta-comparar {
+  width: 220px;
+  background: #fff;
+  border-radius: 12px;
+  padding: 15px;
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.15);
+  text-align: center;
+  transition: transform 0.2s ease;
+}
+
+.tarjeta-comparar:hover {
+  transform: translateY(-5px);
+}
+
+.imagen-principal {
+  width: 100%;
+  height: 150px;
+  object-fit: cover;
+  border-radius: 8px;
+  margin-bottom: 10px;
+}
+
+/* BOTONES CENTRALES */
+.botonera-central {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 12px;
+}
+
+/* COMPARAR */
+.btn-comparar {
+  padding: 12px 24px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 8px;
+  cursor: pointer;
+  font-weight: bold;
+  margin-top: 180px;
+}
+
+.btn-comparar:hover {
+  background-color: #5b8dc6;
+}
+
+/* CANCELAR */
+.btn-cancelar {
+  padding: 10px 22px;
+  background-color: #000000;
+  color: white;
+  border: none;
+  border-radius: 6px;
+  cursor: pointer;
+  font-weight: bold;
+}
+
+.btn-cancelar:hover {
+  background-color: #d32f2f;
+}
+
+/* RESPONSIVE */
+@media (max-width: 768px) {
+  .comparacion-container {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .tarjeta-comparar {
+    width: 90%;
+  }
+
+  .botonera-central {
+    margin: 20px 0;
+  }
+}

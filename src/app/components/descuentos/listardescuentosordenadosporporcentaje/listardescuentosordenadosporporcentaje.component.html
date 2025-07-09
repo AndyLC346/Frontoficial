@@ -1,0 +1,33 @@
+
+
+<div class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div [routerLink]="'/menu'" class="contenedor-logo" style="cursor: pointer; text-decoration: none;">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/descuento.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <div class="header">
+    <h2 style="text-align: center;">DESCUENTOS ORDENADOS POR PORCENTAJE</h2>
+    </div>
+  <div class="chart-wrapper" style="display: flex; justify-content: center; margin-top: 20px;">
+    <div class="chart-container-bg" style="max-width: 500px; width: 100%;">
+
+    <div style="max-width: 500px; width: 100%;">
+    <canvas
+      baseChart
+      [datasets]="barChartData"
+      [labels]="barChartLabels"
+      [options]="barChartOptions"
+      [legend]="barChartLegend"
+      [type]="barChartType"
+    ></canvas>
+  </div>
+</div>

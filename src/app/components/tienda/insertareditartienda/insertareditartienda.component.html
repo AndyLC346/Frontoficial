@@ -1,0 +1,113 @@
+<!-- ENCABEZADO -->
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/tienda.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<!-- FORMULARIO -->
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>Registro de Tiendas</h1>
+    </div>
+
+    <div style="text-align: center">
+      <form [formGroup]="form" (submit)="aceptar()">
+
+        <!-- ID solo en actualización -->
+        <mat-form-field class="example-full-width" *ngIf="actualizacion">
+          <mat-label>ID</mat-label>
+          <input matInput formControlName="codigo" readonly />
+        </mat-form-field>
+        <br />
+
+        <!-- Nombre -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Tienda</mat-label>
+          <input matInput placeholder="Ingresa nombre" formControlName="cajita" />
+          <mat-error *ngIf="form.get('cajita')?.hasError('required')">El nombre es obligatorio.</mat-error>
+          <mat-error *ngIf="form.get('cajita')?.hasError('maxlength')">Máximo 100 caracteres.</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Ubicación -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Ubicación</mat-label>
+          <input matInput placeholder="Ingresa ubicación" formControlName="ubicaciontienda" />
+          <mat-error *ngIf="form.get('ubicaciontienda')?.hasError('required')">La ubicación es obligatoria.</mat-error>
+          <mat-error *ngIf="form.get('ubicaciontienda')?.hasError('maxlength')">Máximo 150 caracteres.</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Descripción -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Descripción de la tienda</mat-label>
+          <input matInput placeholder="Ingresa descripción" formControlName="descripciontienda" />
+          <mat-error *ngIf="form.get('descripciontienda')?.hasError('required')">La descripción es obligatoria.</mat-error>
+          <mat-error *ngIf="form.get('descripciontienda')?.hasError('maxlength')">Máximo 300 caracteres.</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Teléfono -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Teléfono</mat-label>
+          <input matInput placeholder="Ej. 912345678" formControlName="telefonotienda" />
+          <mat-error *ngIf="form.get('telefonotienda')?.hasError('required')">El teléfono es obligatorio.</mat-error>
+          <mat-error *ngIf="form.get('telefonotienda')?.hasError('pattern')">Debe iniciar con 9 y tener 9 dígitos.</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Correo -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Correo de tienda</mat-label>
+          <input matInput placeholder="Ej. tienda@correo.com" formControlName="correotienda" />
+          <mat-error *ngIf="form.get('correotienda')?.hasError('required')">El correo es obligatorio.</mat-error>
+          <mat-error *ngIf="form.get('correotienda')?.hasError('email')">Debe ser un correo válido.</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Latitud -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Latitud</mat-label>
+          <input matInput placeholder="Ingresa latitud" formControlName="latitudtienda" />
+          <mat-error *ngIf="form.get('latitudtienda')?.hasError('required')">La latitud es obligatoria.</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Longitud -->
+        <mat-form-field class="example-full-width">
+          <mat-label>Longitud</mat-label>
+          <input matInput placeholder="Ingresa longitud" formControlName="longitudtienda" />
+          <mat-error *ngIf="form.get('longitudtienda')?.hasError('required')">La longitud es obligatoria.</mat-error>
+        </mat-form-field>
+        <br />
+
+        <!-- Botones personalizados -->
+        <div style="margin-top: 20px;">
+          <button
+            mat-raised-button
+            type="submit"
+            style="background-color: black; color: white; border-radius: 6px; margin-right: 10px;"
+          >
+            Aceptar
+          </button>
+          <button
+            mat-raised-button
+            type="button"
+            (click)="cancelar()"
+            style="background-color: black; color: white; border-radius: 6px;"
+          >
+            Cancelar
+          </button>
+        </div>
+
+      </form>
+    </div>
+  </div>
+</div>

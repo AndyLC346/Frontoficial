@@ -1,0 +1,88 @@
+:host {
+  display: block;
+  min-height: 100vh;
+  background-image: url('/assets/img/fondopresentacion.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+/*Titulo*/
+.logotitulo {
+  position: absolute;
+  top: 33px;
+  left: 15%;
+  transform: translateX(-50%);
+}
+
+.titulopng {
+  width: 500px;
+}
+
+/* Contenedor principal */
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  padding-left: 10%;
+  padding: 20px 0 20px 17%;
+  width: 100%;
+  height: 100vh;
+  box-sizing: border-box;
+  text-align: center;
+  position: relative;
+}
+
+/* Cards */
+.button-cards {
+  display: flex;
+  flex-direction: row;
+  gap: 25px;
+  position: absolute;
+  width: auto;
+  left: 45px;
+  top: 25%;
+  margin-top: 100px;
+  margin-left: 0;
+  padding-left: 0;
+}
+
+.card-button {
+  background: #0073b1;
+  position: relative;
+  height: 150px;
+  width: 200px;
+  min-width: 300px;
+  border-radius: 15px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  box-shadow: 0 4px 8px rgba(91, 181, 255, 0.1);
+  padding: 0 20px;
+}
+
+.card-main-text {
+  color: white;
+  font-size: 39px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 1px;
+}
+
+.card-button:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+}
+
+.hidden-button {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  padding: 0;
+  margin: 0;
+}

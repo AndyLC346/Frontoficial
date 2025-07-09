@@ -1,0 +1,167 @@
+/*Encabezado*/
+.encabezado {
+  background-color: white;
+  width: 100%;
+  padding: 5px 0;
+  box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+  position: relative;
+  z-index: 1000; 
+}
+
+/*Iconos*/
+.iconos span{
+  font-size: 19px;
+  font-weight: 590;
+  margin-left: -10px;
+  line-height: 1.2;
+}
+/* Iconos - Mantiene la posición original */
+.iconos {
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 20px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reducido de 20px a 8px para mantener el espaciado original */
+}
+
+/* Estilo para el botón del icono */
+.iconos button[mat-icon-button] {
+  margin: 5;
+  padding: 4px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* Estilo para el icono dentro del botón */
+.iconos button[mat-icon-button] mat-icon {
+  font-size: 40px;
+  left:-8px;
+  width: 20px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* Mantén el estilo del texto de bienvenida */
+.iconos span {
+  font-size: 19px;
+  font-weight: 590;
+  line-height: 1.2;
+}
+.iconos mat-icon {
+  cursor: pointer;
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+.mat-menu-panel {
+  min-width: 180px !important;
+}
+
+.mat-menu-item[disabled] {
+  opacity: 1;
+  font-weight: bold;
+  color: #000;
+}
+
+/*Png's*/
+.logopng {
+  height: 80px;
+  margin-top: -5px;
+  margin-left: 357px;
+  width: auto;
+  object-fit: contain;
+}
+menuSalir{
+  height: 40px;
+}
+.titulopng {
+  height: 40px;
+  margin-left: -5px;
+  margin-top: 8px;
+  width: auto;
+  object-fit: contain;
+}
+
+/*Contenedores*/
+.contenedor-encabezado {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+/* SEPARACIÓN DEL CONTENIDO */
+.dashboard {
+  background-color: #99d9f2;
+  padding: 30px 15px;
+  min-height: 100vh;
+}
+
+.grid {
+  display: grid;
+  grid-template-columns: repeat(4, 1fr); /* 4 columnas */
+  gap: 20px;
+  padding: 20px;
+  text-align: center;
+}
+
+
+/*Card*/
+.card {
+  background: white;
+  border-radius: 12px;
+  padding: 20px 10px;
+  text-align: center;
+  cursor: pointer;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.2s;
+}
+
+.card:hover {
+  transform: scale(1.05);
+}
+
+
+.card span {
+  display: block;
+  font-weight: bold;
+  color: black;
+  font-size: 14px;
+}
+
+
+.logoprod {
+  height: 80px;
+  margin-top: -5px;
+  margin-left: 0px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logodes {
+  height: 80px;
+  margin-top: -5px;
+  margin-left: 0px;
+  width: auto;
+  object-fit: contain;
+}
+
+.logousua {
+  height: 80px;
+  margin-top: -5px;
+  margin-left: 0px;
+  width: auto;
+  object-fit: contain;
+}

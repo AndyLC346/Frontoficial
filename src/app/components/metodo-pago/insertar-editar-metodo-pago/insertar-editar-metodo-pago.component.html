@@ -1,0 +1,57 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/metodopago.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center; ">
+      <div>
+        <h1>{{ edicion ? 'Editar' : 'Registrar' }} Método de Pago</h1>
+      </div>
+      <div style="text-align: center; ">
+        <form [formGroup]="form" (ngSubmit)="aceptar()">
+          <mat-form-field>
+            <mat-label>Tipo de Método de Pago</mat-label>
+            <mat-select formControlName="tipo">
+              @for (tipo of tipos; track tipo) {
+              <mat-option [value]="tipo.value">{{ tipo.viewValue }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <br />
+
+          <mat-form-field>
+            <mat-label>Fecha de Vencimiento</mat-label>
+            <input matInput [matDatepicker]="pickerVencimiento" formControlName="vencimiento" />
+            <mat-hint>MM/DD/YYYY</mat-hint>
+            <mat-datepicker-toggle matIconSuffix [for]="pickerVencimiento"></mat-datepicker-toggle>
+            <mat-datepicker #pickerVencimiento></mat-datepicker>
+          </mat-form-field>
+          <br />
+
+          <mat-form-field>
+            <mat-label>Usuario</mat-label>
+            <mat-select formControlName="user">
+              @for (user of listaUsuarios; track user) {
+              <mat-option [value]="user.idUser">{{ user.username }}</mat-option>
+              }
+            </mat-select>
+          </mat-form-field>
+          <br />
+
+          <button matButton="filled">Registrar</button>
+        <button matButton="filled" type="button" (click)="cancelar()">Cancelar</button>
+        </form>
+      </div>
+    </div>
+  </div>
+</div>

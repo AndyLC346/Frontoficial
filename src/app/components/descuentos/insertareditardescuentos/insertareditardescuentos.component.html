@@ -1,0 +1,114 @@
+<div style="text-align: center; margin-top: 20px; margin-bottom: 20px" class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/descuento.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>{{ edicion ? 'Editar' : 'Registrar' }} Descuento</h1>
+    </div>
+
+    <div style="text-align: center;">
+      <form [formGroup]="form" (ngSubmit)="aceptar()">
+
+        <mat-form-field class="example-full-width" *ngIf="edicion" appearance="fill">
+          <mat-label>ID Descuento</mat-label>
+          <input matInput formControlName="codigo" />
+          <mat-error *ngIf="form.get('codigo')?.hasError('required')">
+            El ID es obligatorio
+          </mat-error>
+        </mat-form-field>
+
+        <br />
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Porcentaje de Descuento (%)</mat-label>
+          <input matInput type="number" formControlName="porcentajeDescuento" placeholder="Ej: 10" />
+          <mat-error *ngIf="form.get('porcentajeDescuento')?.hasError('required')">
+            El porcentaje es obligatorio
+          </mat-error>
+          <mat-error *ngIf="form.get('porcentajeDescuento')?.hasError('min')">
+            El porcentaje debe ser mayor o igual a 1%
+          </mat-error>
+          <mat-error *ngIf="form.get('porcentajeDescuento')?.hasError('max')">
+            El porcentaje no puede exceder el 100%
+          </mat-error>
+        </mat-form-field>
+
+        <br />
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Código del Descuento</mat-label>
+          <input matInput formControlName="codigoDescuento" placeholder="Ej: VERANO2025" />
+          <mat-error *ngIf="form.get('codigoDescuento')?.hasError('required')">
+            El código del descuento es obligatorio
+          </mat-error>
+        </mat-form-field>
+
+        <br />
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Fecha de Inicio</mat-label>
+          <input matInput [matDatepicker]="pickerInicio" formControlName="fechaInicioDescuento" />
+          <mat-datepicker-toggle matIconSuffix [for]="pickerInicio"></mat-datepicker-toggle>
+          <mat-datepicker #pickerInicio></mat-datepicker>
+          <mat-error *ngIf="form.get('fechaInicioDescuento')?.hasError('required')">
+            La fecha de inicio es obligatoria
+          </mat-error>
+        </mat-form-field>
+
+        <br />
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Fecha de Fin</mat-label>
+          <input matInput [matDatepicker]="pickerFin" formControlName="fechaFinDescuento" />
+          <mat-datepicker-toggle matIconSuffix [for]="pickerFin"></mat-datepicker-toggle>
+          <mat-datepicker #pickerFin></mat-datepicker>
+          <mat-error *ngIf="form.get('fechaFinDescuento')?.hasError('required')">
+            La fecha de fin es obligatoria
+          </mat-error>
+        </mat-form-field>
+
+        <!-- ✅ Validación de rango de fechas -->
+        <div *ngIf="form.hasError('rangoFechasInvalido')" style="color: red; font-size: 14px; margin-bottom: 10px;">
+          ⚠ La fecha de fin no puede ser anterior a la fecha de inicio.
+        </div>
+
+        <br />
+
+        <mat-form-field class="example-full-width" appearance="fill">
+          <mat-label>Producto</mat-label>
+          <mat-select formControlName="producto">
+            <mat-option *ngFor="let prod of listaProductos" [value]="prod.idProducto">
+              {{ prod.nombreProducto }}
+            </mat-option>
+          </mat-select>
+          <mat-error *ngIf="form.get('producto')?.hasError('required')">
+            Debes seleccionar un producto
+          </mat-error>
+        </mat-form-field>
+
+        <br /><br />
+
+        <div style="text-align: center;">
+          <button mat-raised-button type="submit" [disabled]="form.invalid"
+            style="background-color: black; color: white; border-radius: 6px; padding: 10px 24px; margin-right: 12px;">
+            {{ edicion ? 'Actualizar' : 'Registrar' }}
+          </button>
+
+          <button mat-raised-button type="button" (click)="cancelar()"
+            style="background-color: black; color: white; border-radius: 6px; padding: 10px 24px;">
+            Cancelar
+          </button>
+        </div>
+      </form>
+    </div>
+  </div>
+</div>

@@ -1,0 +1,110 @@
+/*Encabezado*/
+.encabezado {
+  background-color: white;
+  width: 100%;
+  padding: 5px 0;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+}
+
+/*Iconos*/
+iconos span{
+  font-size: 19px;
+  font-weight: 590;
+  margin-left: -10px;
+  line-height: 1.2;
+}
+/* Iconos - Mantiene la posición original */
+.iconos {
+  position: absolute;
+  margin-top: 18px;
+  margin-left: 20px;
+  left: 0;
+  display: flex;
+  align-items: center;
+  gap: 8px; /* Reducido de 20px a 8px para mantener el espaciado original */
+}
+
+/* Estilo para el botón del icono */
+.iconos button[mat-icon-button] {
+  margin: 0;
+  padding: 0;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* Estilo para el icono dentro del botón */
+.iconos button[mat-icon-button] mat-icon {
+  font-size: 40px;
+  left:-8px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/* Mantén el estilo del texto de bienvenida */
+.iconos span {
+  font-size: 19px;
+  font-weight: 590;
+  line-height: 1.2;
+}
+.iconos mat-icon {
+  cursor: pointer;
+  font-size: 40px;
+  width: 40px;
+  height: 40px;
+  line-height: 40px;
+}
+
+/*Contenedores*/
+.contenedor-encabezado {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.contenedor-logo {
+  display: flex;
+  align-items: center;
+  cursor: pointer;
+  gap: 10px;
+}
+
+/*Png's*/
+.logopng {
+  height: 80px;
+  margin-top: -5px;
+  margin-left: 350px;
+  width: auto;
+  object-fit: contain;
+}
+
+.titulopng {
+  height: 40px;
+  margin-left: -5px;
+  margin-top: 8px;
+  width: auto;
+  object-fit: contain;
+}
+
+/* SEPARACIÓN DEL CONTENIDO */
+:host {
+  display: block;
+  min-height: 100vh;
+  background-image: url('/assets/img/fondopresentacion.png');
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+  margin: 0;
+  padding: 0;
+}
+
+.Bienvenidos {
+  color: #0073B1;
+  font-weight: bold;
+  font-size: 24px;
+  margin-left: 45px;
+}

@@ -1,0 +1,41 @@
+<div class="encabezado">
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div [routerLink]="'/menu'" class="contenedor-logo" style="cursor: pointer; text-decoration: none;">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/descuento.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <!-- TÍTULO PRINCIPAL -->
+    <div class="header">
+      <h2 style="text-align: center;">CARRITO ORDENADO POR PRECIO</h2>
+    </div>
+
+    <!-- NUEVO GRÁFICO: ORDEN DE CARRITO COMPRA POR PRECIO -->
+    <div class="chart-wrapper" style="display: flex; justify-content: center; margin-top: 40px;">
+      <div class="chart-container-bg" style="max-width: 500px; width: 100%;">
+        <div class="title-container">
+          <div style="text-align: center" class="title">
+            <h1>Orden de Carrito Compra por Precio</h1>
+          </div>
+          <div style="text-align: center" class="chart-container">
+            <canvas
+              baseChart
+              [datasets]="barChartData"
+              [labels]="barChartLabels"
+              [options]="barChartOptions"
+              [legend]="barChartLegend"
+              [type]="barChartType"
+            ></canvas>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+</div>

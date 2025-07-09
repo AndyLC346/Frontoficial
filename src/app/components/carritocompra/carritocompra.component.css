@@ -1,0 +1,27 @@
+.tabla-contenedor {
+  display: flex;
+  justify-content: center;
+  padding: 0 20px;
+}
+
+.tabla-estilizada {
+  width: 100%;
+  max-width: 1000px; /* Limita el ancho de la tabla */
+  background-color: #ffffff;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.15);
+}
+
+.tabla-estilizada th {
+  background-color: #3f51b5;
+  color: white;
+  font-weight: bold;
+  text-align: center;
+}
+
+.tabla-estilizada td {
+  text-align: center;
+  font-size: 14px;
+  padding: 10px;
+}

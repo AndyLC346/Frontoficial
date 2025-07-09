@@ -1,0 +1,64 @@
+<div
+  style="text-align: center; margin-top: 20px; margin-bottom: 20px"
+  class="encabezado"
+>
+  <div class="contenedor-encabezado">
+    <div class="iconos"></div>
+
+    <div class="contenedor-logo" routerLink="/menu">
+      <img src="assets/img/logo.png" alt="Logo" class="logopng" />
+      <img src="assets/logosmenu/logotit.png" alt="Titulo" class="titulopng" />
+      <img src="assets/logosmenu/chat.jpg" class="logo-centro" />
+    </div>
+  </div>
+</div>
+
+<div class="dashboard">
+  <div class="container">
+    <div style="text-align: center">
+      <h1>Registro de Carritos</h1>
+    </div>
+    <div style="text-align: center">
+      <form [formGroup]="form" (ngSubmit)="aceptar()">
+        <mat-form-field class="example-full-width" *ngIf="edicion">
+          <mat-label> ID </mat-label>
+          <br />
+          <input matInput formControlName="codigo" />
+          <mat-error *ngIf="form.get('codigo')?.hasError('required')">
+            El codigo es obligatorio!!
+          </mat-error>
+        </mat-form-field>
+        <br />
+        <br />
+        <br />
+        <div>
+          <label>Estado</label>
+          <mat-radio-group formControlName="estadi">
+            <mat-radio-button [value]="true">Pagado</mat-radio-button>
+            <mat-radio-button [value]="false">Pendiente</mat-radio-button>
+          </mat-radio-group>
+        </div>
+        <br />
+        <br />
+        <br />
+        <mat-form-field>
+          <mat-label>Carrito </mat-label>
+          <mat-select formControlName="carri">
+            @for (food of listaCarritos; track food) {
+            <mat-option [value]="food.idCarritoCompra">{{
+              food.idCarritoCompra
+            }}</mat-option>
+            }
+          </mat-select>
+        </mat-form-field>
+
+        <button matButton="filled">Registrar</button>
+        <br />
+        <br />
+        <button matButton="filled" type="button" (click)="cancelar()">
+          Cancelar
+        </button>
+      </form>
+    </div>
+  </div>
+</div>

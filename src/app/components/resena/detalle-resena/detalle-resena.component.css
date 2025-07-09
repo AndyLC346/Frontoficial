@@ -1,0 +1,110 @@
+.detalle-contenedor {
+  max-width: 700px;
+  margin: 40px auto;
+  padding: 0 16px;
+}
+
+.resena-card {
+  padding: 24px;
+  border-radius: 12px;
+  box-shadow: 0 4px 16px rgba(0,0,0,0.15);
+  background: #fff;
+}
+
+.cabecera {
+  display: flex;
+  justify-content: space-between;
+  font-weight: 600;
+  margin-bottom: 8px;
+}
+
+.usuario { color: #1976d2; }
+.fecha   { color: #666; }
+
+.estrellas mat-icon {
+  color: #ffb400;
+  font-size: 24px;
+}
+
+.comentario {
+  margin: 16px 0;
+  font-size: 17px;
+  line-height: 1.5;
+}
+
+.producto {
+  font-size: 15px;
+  color: #333;
+}
+
+.volver-contenedor {
+  text-align: center;
+  margin-top: 30px;
+
+}
+
+.btn-volver {
+  font-size: 15px;
+  padding: 8px 24px;
+  border-radius: 8px;
+  transition: transform 0.25s;
+  background-color: #000000;
+  color: white;
+  font-weight: bold;
+}
+.btn-volver:hover { transform: scale(1.05); }
+
+
+.contenedor-encabezado {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+
+}
+
+.encabezado {
+  background-color: white;
+  width: 100%;
+  padding: 0px 0px;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.05);
+  position: relative;
+  z-index: 1000;
+  border-bottom: 3px solid black;
+  /* 👈 línea negra delgada */
+}
+
+
+.contenedor-logo {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  margin-bottom: 0px;
+}
+
+.dashboard {
+  background-color: #99d9f2;
+  padding: 30px 15px;
+  min-height: 100vh;
+  margin-top: -20px; /* 👈 crea separación visible para que aparezca el borde */
+}
+
+.logopng {
+  width: 90px;
+  height: auto;
+  margin-left: -140px;
+  margin-top: -70px;
+}
+
+.titulopng {
+  width: 140px;
+  height: auto;
+  margin-left: 10px;
+  margin-top: -70px;
+}
+.logo-centro {
+  display: block;
+  margin: 20px auto 10px auto; /* top, right, bottom, left */
+  margin-left: 455px;
+  width: 100px;
+  height: auto;
+}
