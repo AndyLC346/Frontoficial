@@ -1,18 +1,10 @@
 import {
   MatRippleModule
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-ZJNIIEJQ.js
-} from "./chunk-CSI4XB5N.js";
+} from "./chunk-YCCMFI4Y.js";
 import {
   MatRipple,
   _StructuralStylesLoader
-} from "./chunk-MHRHIQWF.js";
-========
-} from "./chunk-U3KO2XK5.js";
-import {
-  MatRipple,
-  _StructuralStylesLoader
-} from "./chunk-PDHBWV5X.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-3X2FUN64.js
+} from "./chunk-UVBPHU5F.js";
 import {
   ENTER,
   MatCommonModule,
@@ -20,7 +12,7 @@ import {
   _IdGenerator,
   _VisuallyHiddenLoader,
   hasModifierKey
-} from "./chunk-GMSTBHD3.js";
+} from "./chunk-2IQ4OQNZ.js";
 import {
   _CdkPrivateStyleLoader
 } from "./chunk-2LX6K7BJ.js";
@@ -702,8 +694,4 @@ export {
   MatPseudoCheckboxModule,
   MatOptionModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-ZJNIIEJQ.js
-//# sourceMappingURL=chunk-ZJNIIEJQ.js.map
-========
-//# sourceMappingURL=chunk-3X2FUN64.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-3X2FUN64.js
+//# sourceMappingURL=chunk-FXB2HE25.js.map

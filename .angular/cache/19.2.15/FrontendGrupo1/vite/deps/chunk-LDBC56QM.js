@@ -1,58 +1,41 @@
-import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
-} from "./chunk-MHPLETZO.js";
-========
-} from "./chunk-CLNMLQ2I.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js
+} from "./chunk-SCXRU256.js";
 import {
   _isTestEnvironment
-} from "./chunk-BABSEUN5.js";
+} from "./chunk-42FJBLFI.js";
 import {
   coerceCssPixelValue
-} from "./chunk-C5HDTQAM.js";
+} from "./chunk-JXBCBRYI.js";
 import {
   supportsScrollBehavior
-} from "./chunk-JME5XKN5.js";
+} from "./chunk-2O4WY5GE.js";
 import {
   ESCAPE,
   _IdGenerator,
   _getEventTarget,
   coerceArray,
   hasModifierKey
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
-} from "./chunk-EF6L3WMP.js";
+} from "./chunk-2IQ4OQNZ.js";
 import {
   BidiModule,
   Directionality
-} from "./chunk-UUTP3235.js";
-========
-} from "./chunk-QCEHP2WU.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js
+} from "./chunk-GKEXV4RM.js";
 import {
   _CdkPrivateStyleLoader,
   _bindEventWithOptions
-} from "./chunk-5ICBFHDG.js";
-import {
-  BidiModule,
-  Directionality
-} from "./chunk-UUTP3235.js";
+} from "./chunk-2LX6K7BJ.js";
 import {
   Platform
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
-} from "./chunk-KMXVIEOJ.js";
-========
-} from "./chunk-PKF7TUOH.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js
+} from "./chunk-UAHJXKRC.js";
 import {
   Location
-} from "./chunk-XZIY4MOL.js";
+} from "./chunk-Z5MN4PLH.js";
 import {
   DOCUMENT
-} from "./chunk-POUHVWWY.js";
+} from "./chunk-OV3HJYGZ.js";
 import {
   ANIMATION_MODULE_TYPE,
   ApplicationRef,
@@ -79,7 +62,6 @@ import {
   booleanAttribute,
   createComponent,
   inject,
-  require_operators,
   setClassMetadata,
   untracked,
   ɵɵInheritDefinitionFeature,
@@ -91,15 +73,19 @@ import {
   ɵɵdefineInjector,
   ɵɵdefineNgModule,
   ɵɵgetInheritedFactory
-} from "./chunk-SWIVHK54.js";
+} from "./chunk-LBCYZSVY.js";
 import {
-  require_cjs
-} from "./chunk-AQYIT73X.js";
+  Subject,
+  Subscription,
+  filter,
+  merge,
+  takeUntil,
+  takeWhile
+} from "./chunk-P6U2JBMQ.js";
 import {
   __spreadProps,
-  __spreadValues,
-  __toESM
-} from "./chunk-YHCV7DAQ.js";
+  __spreadValues
+} from "./chunk-3OV72XIM.js";
 
 // node_modules/@angular/cdk/fesm2022/portal-directives-Bw5woq8I.mjs
 function throwNullPortalError() {
@@ -665,8 +651,6 @@ var PortalModule = class _PortalModule {
 })();
 
 // node_modules/@angular/cdk/fesm2022/overlay-module-BUj0D19H.mjs
-var import_rxjs = __toESM(require_cjs(), 1);
-var import_operators = __toESM(require_operators(), 1);
 var scrollBehaviorSupported = supportsScrollBehavior();
 var BlockScrollStrategy = class {
   _viewportRuler;
@@ -759,7 +743,7 @@ var CloseScrollStrategy = class {
     if (this._scrollSubscription) {
       return;
     }
-    const stream = this._scrollDispatcher.scrolled(0).pipe((0, import_operators.filter)((scrollable) => {
+    const stream = this._scrollDispatcher.scrolled(0).pipe(filter((scrollable) => {
       return !scrollable || !this._overlayRef.overlayElement.contains(scrollable.getElementRef().nativeElement);
     }));
     if (this._config && this._config.threshold && this._config.threshold > 1) {
@@ -1316,12 +1300,12 @@ var OverlayRef = class {
   _animationsDisabled;
   _injector;
   _renderer;
-  _backdropClick = new import_rxjs.Subject();
-  _attachments = new import_rxjs.Subject();
-  _detachments = new import_rxjs.Subject();
+  _backdropClick = new Subject();
+  _attachments = new Subject();
+  _detachments = new Subject();
   _positionStrategy;
   _scrollStrategy;
-  _locationChanges = import_rxjs.Subscription.EMPTY;
+  _locationChanges = Subscription.EMPTY;
   _backdropRef = null;
   /**
    * Reference to the parent of the `_host` at the time it was detached. Used to restore
@@ -1329,10 +1313,10 @@ var OverlayRef = class {
    */
   _previousHostParent;
   /** Stream of keydown events dispatched to this overlay. */
-  _keydownEvents = new import_rxjs.Subject();
+  _keydownEvents = new Subject();
   /** Stream of mouse outside events dispatched to this overlay. */
-  _outsidePointerEvents = new import_rxjs.Subject();
-  _renders = new import_rxjs.Subject();
+  _outsidePointerEvents = new Subject();
+  _renders = new Subject();
   _afterRenderRef;
   /** Reference to the currently-running `afterNextRender` call. */
   _afterNextRenderRef;
@@ -1645,7 +1629,7 @@ var OverlayRef = class {
   /** Detaches the overlay content next time the zone stabilizes. */
   _detachContentWhenEmpty() {
     this._ngZone.runOutsideAngular(() => {
-      const subscription = this._renders.pipe((0, import_operators.takeUntil)((0, import_rxjs.merge)(this._attachments, this._detachments))).subscribe(() => {
+      const subscription = this._renders.pipe(takeUntil(merge(this._attachments, this._detachments))).subscribe(() => {
         if (!this._pane || !this._host || this._pane.children.length === 0) {
           if (this._pane && this._config.panelClass) {
             this._toggleClasses(this._pane, this._config.panelClass, false);
@@ -1722,9 +1706,9 @@ var FlexibleConnectedPositionStrategy = class {
   /** The last calculated scroll visibility. Only tracked  */
   _lastScrollVisibility;
   /** Subject that emits whenever the position changes. */
-  _positionChanges = new import_rxjs.Subject();
+  _positionChanges = new Subject();
   /** Subscription to viewport size changes. */
-  _resizeSubscription = import_rxjs.Subscription.EMPTY;
+  _resizeSubscription = Subscription.EMPTY;
   /** Default offset for the overlay along the x axis. */
   _offsetX = 0;
   /** Default offset for the overlay along the y axis. */
@@ -2928,10 +2912,10 @@ var CdkConnectedOverlay = class _CdkConnectedOverlay {
   });
   _overlayRef;
   _templatePortal;
-  _backdropSubscription = import_rxjs.Subscription.EMPTY;
-  _attachSubscription = import_rxjs.Subscription.EMPTY;
-  _detachSubscription = import_rxjs.Subscription.EMPTY;
-  _positionSubscription = import_rxjs.Subscription.EMPTY;
+  _backdropSubscription = Subscription.EMPTY;
+  _attachSubscription = Subscription.EMPTY;
+  _detachSubscription = Subscription.EMPTY;
+  _positionSubscription = Subscription.EMPTY;
   _offsetX;
   _offsetY;
   _position;
@@ -3167,7 +3151,7 @@ var CdkConnectedOverlay = class _CdkConnectedOverlay {
     }
     this._positionSubscription.unsubscribe();
     if (this.positionChange.observers.length > 0) {
-      this._positionSubscription = this._position.positionChanges.pipe((0, import_operators.takeWhile)(() => this.positionChange.observers.length > 0)).subscribe((position) => {
+      this._positionSubscription = this._position.positionChanges.pipe(takeWhile(() => this.positionChange.observers.length > 0)).subscribe((position) => {
         this._ngZone.run(() => this.positionChange.emit(position));
         if (this.positionChange.observers.length === 0) {
           this._positionSubscription.unsubscribe();
@@ -3393,8 +3377,6 @@ var OverlayModule = class _OverlayModule {
 })();
 
 // node_modules/@angular/cdk/fesm2022/overlay.mjs
-var import_rxjs2 = __toESM(require_cjs(), 1);
-var import_operators2 = __toESM(require_operators(), 1);
 var FullscreenOverlayContainer = class _FullscreenOverlayContainer extends OverlayContainer {
   _renderer = inject(RendererFactory2).createRenderer(null, null);
   _fullScreenEventName;
@@ -3481,8 +3463,4 @@ export {
   CdkConnectedOverlay,
   OverlayModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
-//# sourceMappingURL=chunk-FMT6VNMH.js.map
-========
-//# sourceMappingURL=chunk-CHECH76Y.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js
+//# sourceMappingURL=chunk-LDBC56QM.js.map

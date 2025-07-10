@@ -3,11 +3,7 @@ import {
   ScrollDispatcher,
   ScrollingModule,
   ViewportRuler
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
 } from "./chunk-MHPLETZO.js";
-========
-} from "./chunk-CLNMLQ2I.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js
 import {
   _isTestEnvironment
 } from "./chunk-BABSEUN5.js";
@@ -23,30 +19,18 @@ import {
   _getEventTarget,
   coerceArray,
   hasModifierKey
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
 } from "./chunk-EF6L3WMP.js";
 import {
   BidiModule,
   Directionality
 } from "./chunk-UUTP3235.js";
-========
-} from "./chunk-QCEHP2WU.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js
 import {
   _CdkPrivateStyleLoader,
   _bindEventWithOptions
 } from "./chunk-5ICBFHDG.js";
 import {
-  BidiModule,
-  Directionality
-} from "./chunk-UUTP3235.js";
-import {
   Platform
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
 } from "./chunk-KMXVIEOJ.js";
-========
-} from "./chunk-PKF7TUOH.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js
 import {
   Location
 } from "./chunk-XZIY4MOL.js";
@@ -3481,8 +3465,4 @@ export {
   CdkConnectedOverlay,
   OverlayModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-FMT6VNMH.js
 //# sourceMappingURL=chunk-FMT6VNMH.js.map
-========
-//# sourceMappingURL=chunk-CHECH76Y.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CHECH76Y.js

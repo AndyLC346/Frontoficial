@@ -7,17 +7,10 @@ import {
 } from "./chunk-TSDW7S4V.js";
 import {
   MatCommonModule
-<<<<<<< HEAD
 } from "./chunk-EF6L3WMP.js";
 import "./chunk-UUTP3235.js";
 import "./chunk-5ICBFHDG.js";
 import "./chunk-KMXVIEOJ.js";
-=======
-} from "./chunk-QCEHP2WU.js";
-import "./chunk-5ICBFHDG.js";
-import "./chunk-UUTP3235.js";
-import "./chunk-PKF7TUOH.js";
->>>>>>> Andy
 import "./chunk-XZIY4MOL.js";
 import {
   DOCUMENT

@@ -1,11 +1,7 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   MatFormFieldModule
-<<<<<<< HEAD
 } from "./chunk-DWXQTJUF.js";
-=======
-} from "./chunk-NVM4HBTD.js";
->>>>>>> Andy
 import {
   MAT_ERROR,
   MAT_FORM_FIELD,
@@ -22,26 +18,15 @@ import {
   getMatFormFieldDuplicatedHintError,
   getMatFormFieldMissingControlError,
   getMatFormFieldPlaceholderConflictError
-<<<<<<< HEAD
 } from "./chunk-TUAB66OA.js";
-=======
-} from "./chunk-GMGKMM6V.js";
->>>>>>> Andy
 import "./chunk-VAT3HF6J.js";
 import "./chunk-BABSEUN5.js";
 import "./chunk-C5HDTQAM.js";
 import "./chunk-JME5XKN5.js";
-<<<<<<< HEAD
 import "./chunk-EF6L3WMP.js";
 import "./chunk-UUTP3235.js";
 import "./chunk-5ICBFHDG.js";
 import "./chunk-KMXVIEOJ.js";
-=======
-import "./chunk-QCEHP2WU.js";
-import "./chunk-5ICBFHDG.js";
-import "./chunk-UUTP3235.js";
-import "./chunk-PKF7TUOH.js";
->>>>>>> Andy
 import "./chunk-XZIY4MOL.js";
 import "./chunk-POUHVWWY.js";
 import {

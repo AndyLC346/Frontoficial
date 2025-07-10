@@ -3,14 +3,14 @@ import {
   isFakeMousedownFromScreenReader,
   isFakeTouchstartFromScreenReader,
   normalizePassiveListenerOptions
-} from "./chunk-GMSTBHD3.js";
+} from "./chunk-2IQ4OQNZ.js";
 import {
   _CdkPrivateStyleLoader
 } from "./chunk-2LX6K7BJ.js";
 import {
   Platform,
   coerceElement
-} from "./chunk-RXQHB6EW.js";
+} from "./chunk-UAHJXKRC.js";
 import {
   ANIMATION_MODULE_TYPE,
   ChangeDetectionStrategy,
@@ -647,8 +647,4 @@ export {
   MatRipple,
   _StructuralStylesLoader
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-MHRHIQWF.js
-//# sourceMappingURL=chunk-MHRHIQWF.js.map
-========
-//# sourceMappingURL=chunk-PDHBWV5X.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-PDHBWV5X.js
+//# sourceMappingURL=chunk-UVBPHU5F.js.map

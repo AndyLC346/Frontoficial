@@ -3,27 +3,16 @@ import {
   MAT_RIPPLE_GLOBAL_OPTIONS,
   RippleRenderer,
   defaultRippleAnimationConfig
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-IUMKQCPR.js
 } from "./chunk-PW5DN7PE.js";
 import {
   _getEventTarget
 } from "./chunk-EF6L3WMP.js";
-========
-} from "./chunk-E2IIFSWE.js";
-import {
-  _getEventTarget
-} from "./chunk-QCEHP2WU.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-PJBSWSV6.js
 import {
   _bindEventWithOptions
 } from "./chunk-5ICBFHDG.js";
 import {
   Platform
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-IUMKQCPR.js
 } from "./chunk-KMXVIEOJ.js";
-========
-} from "./chunk-PKF7TUOH.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-PJBSWSV6.js
 import {
   DOCUMENT
 } from "./chunk-POUHVWWY.js";
@@ -183,8 +172,4 @@ var MatRippleLoader = class _MatRippleLoader {
 export {
   MatRippleLoader
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-IUMKQCPR.js
 //# sourceMappingURL=chunk-IUMKQCPR.js.map
-========
-//# sourceMappingURL=chunk-PJBSWSV6.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-PJBSWSV6.js

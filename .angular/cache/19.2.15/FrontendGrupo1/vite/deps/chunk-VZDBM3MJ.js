@@ -1,4 +1,3 @@
-import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   MatError,
   MatFormField,
@@ -6,25 +5,17 @@ import {
   MatLabel,
   MatPrefix,
   MatSuffix
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-DWXQTJUF.js
-} from "./chunk-TUAB66OA.js";
+} from "./chunk-KAYZC25Z.js";
 import {
   MatCommonModule,
   ObserversModule
-} from "./chunk-EF6L3WMP.js";
-========
-} from "./chunk-GMGKMM6V.js";
-import {
-  MatCommonModule,
-  ObserversModule
-} from "./chunk-QCEHP2WU.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-NVM4HBTD.js
+} from "./chunk-2IQ4OQNZ.js";
 import {
   NgModule,
   setClassMetadata,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-SWIVHK54.js";
+} from "./chunk-LBCYZSVY.js";
 
 // node_modules/@angular/material/fesm2022/module-BXZhw7pQ.mjs
 var MatFormFieldModule = class _MatFormFieldModule {
@@ -53,8 +44,4 @@ var MatFormFieldModule = class _MatFormFieldModule {
 export {
   MatFormFieldModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-DWXQTJUF.js
-//# sourceMappingURL=chunk-DWXQTJUF.js.map
-========
-//# sourceMappingURL=chunk-NVM4HBTD.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-NVM4HBTD.js
+//# sourceMappingURL=chunk-VZDBM3MJ.js.map

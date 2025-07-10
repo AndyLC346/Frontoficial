@@ -11,6 +11,20 @@ import {
   ɵɵdefineInjectable
 } from "./chunk-SWIVHK54.js";
 
+// node_modules/@angular/cdk/fesm2022/element-x4z00URv.mjs
+function coerceNumberProperty(value, fallbackValue = 0) {
+  if (_isNumberValue(value)) {
+    return Number(value);
+  }
+  return arguments.length === 2 ? fallbackValue : 0;
+}
+function _isNumberValue(value) {
+  return !isNaN(parseFloat(value)) && !isNaN(Number(value));
+}
+function coerceElement(elementOrRef) {
+  return elementOrRef instanceof ElementRef ? elementOrRef.nativeElement : elementOrRef;
+}
+
 // node_modules/@angular/cdk/fesm2022/platform-DmdVEw_C.mjs
 var hasV8BreakIterator;
 try {
@@ -72,28 +86,10 @@ var Platform = class _Platform {
   }], () => [], null);
 })();
 
-// node_modules/@angular/cdk/fesm2022/element-x4z00URv.mjs
-function coerceNumberProperty(value, fallbackValue = 0) {
-  if (_isNumberValue(value)) {
-    return Number(value);
-  }
-  return arguments.length === 2 ? fallbackValue : 0;
-}
-function _isNumberValue(value) {
-  return !isNaN(parseFloat(value)) && !isNaN(Number(value));
-}
-function coerceElement(elementOrRef) {
-  return elementOrRef instanceof ElementRef ? elementOrRef.nativeElement : elementOrRef;
-}
-
 export {
-  Platform,
   coerceNumberProperty,
   _isNumberValue,
-  coerceElement
+  coerceElement,
+  Platform
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-KMXVIEOJ.js
 //# sourceMappingURL=chunk-KMXVIEOJ.js.map
-========
-//# sourceMappingURL=chunk-PKF7TUOH.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-PKF7TUOH.js

@@ -1,26 +1,16 @@
 import {
   MatRippleLoader
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-32D2CPU7.js
-} from "./chunk-FZB57KD5.js";
+} from "./chunk-FF7C2GQ2.js";
 import {
   MatRippleModule
-} from "./chunk-CSI4XB5N.js";
+} from "./chunk-YCCMFI4Y.js";
 import {
   _StructuralStylesLoader
-} from "./chunk-MHRHIQWF.js";
-========
-} from "./chunk-NGOUEE7I.js";
-import {
-  MatRippleModule
-} from "./chunk-U3KO2XK5.js";
-import {
-  _StructuralStylesLoader
-} from "./chunk-PDHBWV5X.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-DMXXWDU4.js
+} from "./chunk-UVBPHU5F.js";
 import {
   FocusMonitor,
   MatCommonModule
-} from "./chunk-GMSTBHD3.js";
+} from "./chunk-2IQ4OQNZ.js";
 import {
   _CdkPrivateStyleLoader
 } from "./chunk-2LX6K7BJ.js";
@@ -1047,8 +1037,4 @@ export {
   MatMiniFabAnchor,
   MatButtonModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-32D2CPU7.js
-//# sourceMappingURL=chunk-32D2CPU7.js.map
-========
-//# sourceMappingURL=chunk-DMXXWDU4.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-DMXXWDU4.js
+//# sourceMappingURL=chunk-Z5DQCAKL.js.map

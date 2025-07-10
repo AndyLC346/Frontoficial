@@ -18,11 +18,7 @@ import {
   Platform,
   coerceElement,
   coerceNumberProperty
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-MHPLETZO.js
 } from "./chunk-KMXVIEOJ.js";
-========
-} from "./chunk-PKF7TUOH.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CLNMLQ2I.js
 import {
   DOCUMENT
 } from "./chunk-POUHVWWY.js";
@@ -1560,8 +1556,4 @@ export {
   CdkScrollableModule,
   ScrollingModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-MHPLETZO.js
 //# sourceMappingURL=chunk-MHPLETZO.js.map
-========
-//# sourceMappingURL=chunk-CLNMLQ2I.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-CLNMLQ2I.js

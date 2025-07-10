@@ -1,26 +1,19 @@
-import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   MatCommonModule
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-BI4L5L7S.js
-} from "./chunk-EF6L3WMP.js";
-========
-} from "./chunk-QCEHP2WU.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-UBTJ52LC.js
+} from "./chunk-2IQ4OQNZ.js";
 import {
   Directive,
   NgModule,
-  require_operators,
   setClassMetadata,
   ɵɵdefineDirective,
   ɵɵdefineInjector,
   ɵɵdefineNgModule
-} from "./chunk-SWIVHK54.js";
+} from "./chunk-LBCYZSVY.js";
 import {
-  __toESM
-} from "./chunk-YHCV7DAQ.js";
+  startWith
+} from "./chunk-P6U2JBMQ.js";
 
 // node_modules/@angular/material/fesm2022/line-Bm3zUbBF.mjs
-var import_operators = __toESM(require_operators(), 1);
 var MatLine = class _MatLine {
   static ɵfac = function MatLine_Factory(__ngFactoryType__) {
     return new (__ngFactoryType__ || _MatLine)();
@@ -43,7 +36,7 @@ var MatLine = class _MatLine {
   }], null, null);
 })();
 function setLines(lines, element, prefix = "mat") {
-  lines.changes.pipe((0, import_operators.startWith)(lines)).subscribe(({
+  lines.changes.pipe(startWith(lines)).subscribe(({
     length
   }) => {
     setClass(element, `${prefix}-2-line`, false);
@@ -87,8 +80,4 @@ export {
   setLines,
   MatLineModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-BI4L5L7S.js
-//# sourceMappingURL=chunk-BI4L5L7S.js.map
-========
-//# sourceMappingURL=chunk-UBTJ52LC.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-UBTJ52LC.js
+//# sourceMappingURL=chunk-3W4U5KUI.js.map

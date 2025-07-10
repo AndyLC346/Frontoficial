@@ -1,26 +1,16 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-EF6L3WMP.js
   BidiModule
 } from "./chunk-UUTP3235.js";
 import {
-========
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-QCEHP2WU.js
   _CdkPrivateStyleLoader,
   _bindEventWithOptions
 } from "./chunk-5ICBFHDG.js";
 import {
-  BidiModule
-} from "./chunk-UUTP3235.js";
-import {
   Platform,
   coerceElement,
   coerceNumberProperty
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-EF6L3WMP.js
 } from "./chunk-KMXVIEOJ.js";
-========
-} from "./chunk-PKF7TUOH.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-QCEHP2WU.js
 import {
   DOCUMENT
 } from "./chunk-POUHVWWY.js";
@@ -3194,8 +3184,4 @@ export {
   MATERIAL_SANITY_CHECKS,
   MatCommonModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-EF6L3WMP.js
 //# sourceMappingURL=chunk-EF6L3WMP.js.map
-========
-//# sourceMappingURL=chunk-QCEHP2WU.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-QCEHP2WU.js

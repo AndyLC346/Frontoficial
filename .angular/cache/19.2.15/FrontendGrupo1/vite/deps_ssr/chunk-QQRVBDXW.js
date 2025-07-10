@@ -7,11 +7,7 @@ import {
   Platform,
   coerceElement,
   coerceNumberProperty
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-QQRVBDXW.js
 } from "./chunk-KMXVIEOJ.js";
-========
-} from "./chunk-PKF7TUOH.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-PRIPXYAE.js
 import {
   DOCUMENT
 } from "./chunk-POUHVWWY.js";
@@ -517,8 +513,4 @@ export {
   CdkTextareaAutosize,
   TextFieldModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-QQRVBDXW.js
 //# sourceMappingURL=chunk-QQRVBDXW.js.map
-========
-//# sourceMappingURL=chunk-PRIPXYAE.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-PRIPXYAE.js

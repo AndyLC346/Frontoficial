@@ -11,17 +11,10 @@ import {
   OverlayRef,
   PortalModule,
   TemplatePortal
-<<<<<<< HEAD
 } from "./chunk-FMT6VNMH.js";
 import {
   CdkScrollable
 } from "./chunk-MHPLETZO.js";
-=======
-} from "./chunk-CHECH76Y.js";
-import {
-  CdkScrollable
-} from "./chunk-CLNMLQ2I.js";
->>>>>>> Andy
 import "./chunk-44IEGNXQ.js";
 import "./chunk-BABSEUN5.js";
 import "./chunk-C5HDTQAM.js";
@@ -36,7 +29,6 @@ import {
   _IdGenerator,
   _getFocusedElementPierceShadowDom,
   hasModifierKey
-<<<<<<< HEAD
 } from "./chunk-EF6L3WMP.js";
 import {
   Directionality
@@ -46,17 +38,6 @@ import {
   Platform,
   coerceNumberProperty
 } from "./chunk-KMXVIEOJ.js";
-=======
-} from "./chunk-QCEHP2WU.js";
-import "./chunk-5ICBFHDG.js";
-import {
-  Directionality
-} from "./chunk-UUTP3235.js";
-import {
-  Platform,
-  coerceNumberProperty
-} from "./chunk-PKF7TUOH.js";
->>>>>>> Andy
 import "./chunk-XZIY4MOL.js";
 import {
   DOCUMENT

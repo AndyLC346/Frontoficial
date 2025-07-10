@@ -1,24 +1,16 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
-  ROUTES,
-  Router,
-  loadChildren
-} from "./chunk-CES2DQQV.js";
-import {
   INITIAL_CONFIG,
   SERVER_CONTEXT,
   platformServer,
   renderApplication,
   renderModule
 } from "./chunk-ZAUMHWVA.js";
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-GZDIHPKA.js
-========
 import {
   ROUTES,
   Router,
   loadChildren
 } from "./chunk-CES2DQQV.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-UPULFSDA.js
 import {
   APP_BASE_HREF,
   PlatformLocation
@@ -11995,8 +11987,4 @@ export {
   AngularAppEngine,
   createRequestHandler
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-GZDIHPKA.js
-//# sourceMappingURL=chunk-GZDIHPKA.js.map
-========
 //# sourceMappingURL=chunk-UPULFSDA.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-UPULFSDA.js

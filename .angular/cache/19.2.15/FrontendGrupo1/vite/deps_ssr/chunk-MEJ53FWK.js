@@ -1,7 +1,6 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   MatRippleLoader
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-MEJ53FWK.js
 } from "./chunk-IUMKQCPR.js";
 import {
   MatRippleModule
@@ -13,19 +12,6 @@ import {
   FocusMonitor,
   MatCommonModule
 } from "./chunk-EF6L3WMP.js";
-========
-} from "./chunk-PJBSWSV6.js";
-import {
-  MatRippleModule
-} from "./chunk-J2BEEOL6.js";
-import {
-  _StructuralStylesLoader
-} from "./chunk-E2IIFSWE.js";
-import {
-  FocusMonitor,
-  MatCommonModule
-} from "./chunk-QCEHP2WU.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-AIWC2VF6.js
 import {
   _CdkPrivateStyleLoader
 } from "./chunk-5ICBFHDG.js";
@@ -1052,8 +1038,4 @@ export {
   MatMiniFabAnchor,
   MatButtonModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-MEJ53FWK.js
 //# sourceMappingURL=chunk-MEJ53FWK.js.map
-========
-//# sourceMappingURL=chunk-AIWC2VF6.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-AIWC2VF6.js

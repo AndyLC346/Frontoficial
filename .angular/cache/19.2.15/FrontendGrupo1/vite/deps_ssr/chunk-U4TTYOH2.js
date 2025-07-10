@@ -1,19 +1,11 @@
 import { createRequire } from 'module';const require = createRequire(import.meta.url);
 import {
   MatRippleModule
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-U4TTYOH2.js
 } from "./chunk-K2RBOZZJ.js";
 import {
   MatRipple,
   _StructuralStylesLoader
 } from "./chunk-PW5DN7PE.js";
-========
-} from "./chunk-J2BEEOL6.js";
-import {
-  MatRipple,
-  _StructuralStylesLoader
-} from "./chunk-E2IIFSWE.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-HS2J43OE.js
 import {
   ENTER,
   MatCommonModule,
@@ -21,11 +13,7 @@ import {
   _IdGenerator,
   _VisuallyHiddenLoader,
   hasModifierKey
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-U4TTYOH2.js
 } from "./chunk-EF6L3WMP.js";
-========
-} from "./chunk-QCEHP2WU.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-HS2J43OE.js
 import {
   _CdkPrivateStyleLoader
 } from "./chunk-5ICBFHDG.js";
@@ -711,8 +699,4 @@ export {
   MatPseudoCheckboxModule,
   MatOptionModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-U4TTYOH2.js
 //# sourceMappingURL=chunk-U4TTYOH2.js.map
-========
-//# sourceMappingURL=chunk-HS2J43OE.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps_ssr/chunk-HS2J43OE.js

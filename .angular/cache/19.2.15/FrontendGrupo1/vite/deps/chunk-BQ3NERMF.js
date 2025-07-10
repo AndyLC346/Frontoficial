@@ -2,65 +2,35 @@ import {
   SelectionModel
 } from "./chunk-WAGG6YYV.js";
 import {
-  CdkConnectedOverlay,
-  CdkOverlayOrigin,
-  Overlay,
-  OverlayModule
-} from "./chunk-PP2JIMPQ.js";
-import {
-  MatFormFieldModule
-} from "./chunk-K6NBHAOM.js";
-import {
-  MAT_FORM_FIELD,
-  MatFormFieldControl
-} from "./chunk-2RN6VUCD.js";
-import {
-  CdkScrollableModule,
-  ViewportRuler
-} from "./chunk-M73QGM2T.js";
-import {
-  FormGroupDirective,
-  NgControl,
-  NgForm,
-  Validators
-} from "./chunk-33UJYZQC.js";
-import {
   MAT_OPTGROUP,
   MAT_OPTION_PARENT_COMPONENT,
   MatOption,
   MatOptionModule,
   _countGroupLabelsBeforeOption,
   _getOptionScrollPosition
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-BUEDBU5Z.js
-} from "./chunk-ZJNIIEJQ.js";
+} from "./chunk-FXB2HE25.js";
 import {
   CdkConnectedOverlay,
   CdkOverlayOrigin,
   Overlay,
   OverlayModule
-} from "./chunk-SFHDKE33.js";
-import {
-  MatFormFieldModule
-} from "./chunk-K6NBHAOM.js";
-========
-} from "./chunk-3X2FUN64.js";
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-QLATFKRI.js
+} from "./chunk-LDBC56QM.js";
 import {
   ErrorStateMatcher,
   _ErrorStateTracker
 } from "./chunk-7IEUOBBM.js";
 import {
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-BUEDBU5Z.js
+  MatFormFieldModule
+} from "./chunk-VZDBM3MJ.js";
+import {
   MAT_FORM_FIELD,
   MatFormFieldControl
-} from "./chunk-2RN6VUCD.js";
+} from "./chunk-KAYZC25Z.js";
 import {
   CdkScrollableModule,
   ViewportRuler
-} from "./chunk-M73QGM2T.js";
+} from "./chunk-SCXRU256.js";
 import {
-========
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-QLATFKRI.js
   A,
   ActiveDescendantKeyManager,
   DOWN_ARROW,
@@ -76,7 +46,7 @@ import {
   addAriaReferencedId,
   hasModifierKey,
   removeAriaReferencedId
-} from "./chunk-GMSTBHD3.js";
+} from "./chunk-2IQ4OQNZ.js";
 import {
   Directionality
 } from "./chunk-GKEXV4RM.js";
@@ -1615,8 +1585,4 @@ export {
   MatSelectTrigger,
   MatSelectModule
 };
-<<<<<<<< HEAD:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-BUEDBU5Z.js
-//# sourceMappingURL=chunk-BUEDBU5Z.js.map
-========
-//# sourceMappingURL=chunk-QLATFKRI.js.map
->>>>>>>> Andy:.angular/cache/19.2.15/FrontendGrupo1/vite/deps/chunk-QLATFKRI.js
+//# sourceMappingURL=chunk-BQ3NERMF.js.map
